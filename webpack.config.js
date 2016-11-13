@@ -41,7 +41,7 @@ const cssLoader = PRODUCTION
 	?	ExtractTextPlugin.extract({
 			loader: cssLoaderParts.join('!')
 		})
-	: 	cssLoaderParts.join('!');
+	: 	'style!' + cssLoaderParts.join('!');
 
 module.exports = {
 
