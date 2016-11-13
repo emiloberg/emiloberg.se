@@ -1,4 +1,5 @@
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var webpack = require('webpack');
 var path = require('path');
 
@@ -17,8 +18,10 @@ const entry = PRODUCTION
 		'webpack-dev-server/client?http://localhost:8080'
 	];
 
+
 const plugins = PRODUCTION
 	? 	[
+			new ExtractTextPlugin('bundle.css'),
 			new StaticSiteGeneratorPlugin('main', paths, {
 				// Properties here are merged into `locals`
 				// passed to the exported render function
@@ -28,6 +31,17 @@ const plugins = PRODUCTION
 	: 	[
 			new webpack.HotModuleReplacementPlugin()
 		];
+
+const cssSelectorName = '[name]__[local]___[hash:base64:5]';
+const cssLoaderParts = [
+	'css-loader?sourceMap&modules&importLoaders=1&localIdentName=' + cssSelectorName + ''
+];
+
+const cssLoader = PRODUCTION
+	?	ExtractTextPlugin.extract({
+			loader: cssLoaderParts.join('!')
+		})
+	: 	cssLoaderParts.join('!');
 
 module.exports = {
 
@@ -50,6 +64,10 @@ module.exports = {
 		loaders: [{
 			test: /\.jsx?$/,
 			loaders: ['babel-loader'],
+			exclude: /node_modules/
+		}, {
+			test: /\.css$/,
+			loaders: cssLoader,
 			exclude: /node_modules/
 		}]
 	}
