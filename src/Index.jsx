@@ -1,12 +1,51 @@
 import React from 'react';
 
-import Topper from './components/topper/topper';
+import Section from './components/section/section';
+import LogoName from './components/logoName/logoName';
+import YtVideo from 'components/ytVideo/ytVideo';
 
-import styles from './index.css';
+import globalStyle from './index.css';
+
+/**
+ * decs={['SingleWhiteSlantedBox']}
+ * decs="SingleWhiteSlantedBox"
+ * decs={[{ type: 'SingleWhiteSlantedBox' }]}
+ */
+
 
 export default () => (
 	<div>
-		Here should be an image of a kitten<br />
-		<Topper />
+		<Section
+			decs="SingleWhiteSlantedBox"
+			bg="HoneyComb"
+			cols="Even"
+			padding="Medium"
+		>
+			<LogoName />
+		</Section>
+		{/*decs="VideoSingleWhiteSlantedBox"*/}
+		<Section
+			decs="SingleVideo"
+			bg="Blue"
+			cols="Even"
+			padding="Large"
+		>
+			<YtVideo
+				showViews
+				ytId="R98cdsq1qxA"
+				title="NativeScript vs. PhoneGap, React, Titanium, Ionic, etc"
+			/>
+		</Section>
+		<Section
+			decs="SingleVideo"
+			bg="Blue"
+			cols="Even"
+			padding="Large"
+		>
+			<YtVideo
+				ytId="eWmkBNBTbMM"
+				title="Webpack 2 - A full tutorial"
+			/>
+		</Section>
 	</div>
 );

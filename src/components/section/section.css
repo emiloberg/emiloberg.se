@@ -1,0 +1,91 @@
+.selection {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/**
+ * COLUMNS
+ */
+.paddingMedium {
+    padding: 1em 0 15em 0;
+}
+
+.paddingSmall {
+    padding: 1em 0;
+}
+
+.paddingLarge {
+    padding: 8em 0;
+}
+
+/**
+ * COLUMNS
+ */
+.colsEven > * {
+    flex: 1 1 0;
+    z-index: 1;
+}
+
+/**
+ * BACKGROUNDS
+ */
+.bgBlue {
+    /*background-color: #1977CC;*/
+    background-color: #C5EDF9;
+}
+
+.bgHoneyComb {
+    background-color: #C5EDF9;
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMDAiPgo8cmVjdCB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiBmaWxsPSIjQzVFREY5Ij48L3JlY3Q+CjxwYXRoIGQ9Ik0yOCAwTDI4IDM0TDAgNTBMMCA4NEwyOCAxMDBMNTYgODRMNTYgNTBMMjggMzQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0I3RENFNyIgc3Ryb2tlLXdpZHRoPSIyIj48L3BhdGg+Cjwvc3ZnPg==");
+}
+
+/**
+ * DECORATOR STYLES
+ */
+.decoratorSingleWhiteSlantedBox {
+    position: absolute;
+    width: 50%;
+    height: 140%;
+    top: -40%;
+    left: -10%;
+    transform: rotate(20deg);
+    transform-origin: bottom left;
+    background-color: #fff;
+
+}
+
+.decoratorSingleVideo {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 10em);
+    top: 0;
+    left: 0;
+    margin: 4em 0; /* same as padding on section */
+}
+
+.decoratorSingleVideoInner {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    margin: 0 auto;
+    max-width: 900px;
+    transform: skewY(-3deg);
+    border-radius: 1px; /* hack to soften even the straight edges on this skewed square */
+    border: 4px solid #b7dce7;
+    box-shadow: 0 0 5em rgba(0,0,0,.3);
+    transition: box-shadow 250ms;
+}
+
+/*.decoratorVideoSingleWhiteSlantedBox {*/
+    /*position: absolute;*/
+    /*width: 70%;*/
+    /*height: 140%;*/
+    /*top: -40%;*/
+    /*left: -20%;*/
+    /*transform: rotate(10deg);*/
+    /*transform-origin: bottom left;*/
+    /*background-color: #fff;*/
+    /*!*box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);*!*/
+    /*box-shadow: 0 0 5em rgba(0,0,0,.3);*/
+/*}*/

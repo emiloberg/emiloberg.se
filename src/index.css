@@ -1,3 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
+
+/**
+ * RESET
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
 body {
-    background-color: blue;
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/**
+ * STYLE
+ */
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+h2 {
+    /*font-family: 'Playfair Display', serif;*/
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    color: #1977CC;
+    /*display: inline;*/
+    /*box-shadow: inset 0 -.7em 0 #FFEB3B;*/
+    font-size: 1.5rem;
+    /* Increment: (1.3333 - 1.2) × 24px = 3.2px */
+    line-height: calc( 120% + 0.2 * 1rem );
+
+}
+
+@media (min-width: 20em) {
+    h2 {
+        font-size: calc( 1.5rem + .6 * (100vw - 20rem) / (60 - 20) );
+        /* from 120% + 3.2px to 120% + 0px */
+        line-height: calc( 120% + 0.2 * (100vw - 60rem) / (20 - 60) );
+    }
+}
+@media (min-width: 60em) {
+    h2 {
+        font-size: calc(1.5rem + .6 * 1rem);
+        /* Base value, no increment needed. */
+        line-height: 120%;
+    }
+}
+
+/* TODO: FIX VISITED ETC */
+a {
+    text-decoration: none;
+}
+
+a h2 {
+    display: inline;
+    box-shadow: inset 0 -.7em 0 #FFEB3B;
+    color: #1977CC;
+    transition: box-shadow 180ms;
+}
+
+a h2:hover {
+    box-shadow: inset 0 -1.1em 0 #FFEB3B;
 }

@@ -1,0 +1,62 @@
+.nameWrapper {
+    text-align: right;
+}
+
+.name {
+    /*font-family: 'Playfair Display', serif;*/
+    /*font-family: 'Roboto Slab', serif;*/
+    font-family: 'Lato', serif;
+    letter-spacing: -.07em;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    color: #1977CC;
+    margin: .2em;
+    display: inline-block;
+}
+
+.name:after {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -2%;
+    width: 110%; height: 120%;
+    background: #ffeb3b; /*#FCF87A*/
+    transform-origin: 100% 0;
+    transform: skew(-5deg);
+    z-index: -1;
+    border-radius: 5px;
+}
+
+/*
+@media (min-width: 20em) and (max-width: 60em) {
+  selector {
+    property: calc(
+      baseline_value +
+      multiplier *
+      (100vw - 20rem) / (60 - 20)
+    );
+  }
+}
+*/
+
+.name {
+    font-size: 2.5rem;
+    /* Increment: (1.3333 - 1.2) × 24px = 3.2px */
+    line-height: calc( 120% + 0.2 * 1rem );
+}
+
+@media (min-width: 20em) {
+    .name {
+        font-size: calc( 2.5rem + 2 * (100vw - 20rem) / (60 - 20) );
+        /* from 120% + 3.2px to 120% + 0px */
+        line-height: calc( 120% + 0.2 * (100vw - 60rem) / (20 - 60) );
+    }
+}
+@media (min-width: 60em) {
+    .name {
+        font-size: calc(2.5rem + 2 * 1rem);
+        /* Base value, no increment needed. */
+        line-height: 120%;
+    }
+}

@@ -6,6 +6,8 @@ var path = require('path');
 const DEVELOPMENT = process.env.NODE_ENV === 'development';
 const PRODUCTION = process.env.NODE_ENV === 'production';
 
+const DATA_YOUTUBE = require('./temp/yt-views.json');
+
 const paths = ['/'];
 
 const entry = PRODUCTION
@@ -32,6 +34,14 @@ const plugins = PRODUCTION
 			new webpack.HotModuleReplacementPlugin()
 		];
 
+plugins.push(
+	new webpack.DefinePlugin({
+		DATA: {
+			youTubeViews: DATA_YOUTUBE
+		}
+	})
+);
+
 const cssSelectorName = '[name]__[local]___[hash:base64:5]';
 const cssLoaderParts = [
 	'css-loader?sourceMap&modules&importLoaders=1&localIdentName=' + cssSelectorName + ''
@@ -43,13 +53,18 @@ const cssLoader = PRODUCTION
 		})
 	: 	'style!' + cssLoaderParts.join('!');
 
+console.log(path.resolve(__dirname, 'src/shared'));
+
 module.exports = {
 
 	entry: entry,
 	plugins: plugins,
 	resolve: {
 		extensions: ['.js', '.jsx'],
-		modules: ['src', 'node_modules']
+		modules: ['src', 'node_modules', 'src/components'],
+		alias: {
+			// shared: path.resolve(__dirname, 'src/shared')
+		}
 	},
 	output: {
 		path: path.join(__dirname, 'dist'),
@@ -69,7 +84,9 @@ module.exports = {
 			test: /\.css$/,
 			loaders: cssLoader,
 			exclude: /node_modules/
-		}]
+		},
+			{ test: /\.svg$/, loader: 'babel?presets[]=es2015,presets[]=react!svg-react' }
+		]
 	}
 
 };
