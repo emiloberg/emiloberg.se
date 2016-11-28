@@ -1,7 +1,10 @@
 import React from 'react';
 
+import classnames from 'classnames';
 
 import ContentBox from 'components/contentbox/contentbox';
+import Icon from 'components/icon/icon';
+import YtPlaybar from 'components/ytPlaybar/ytPlaybar';
 
 import styles from './media.css'
 
@@ -19,10 +22,34 @@ export default ({ type, mediaId, no, showTitle = true, showDesc = true }) => {
 		const views = DATA.youTubeViews[mediaId];
 		titleURL = `https://www.youtube.com/watch?v=${mediaId}`;
 		mainMedia = (<iframe src={embedURL} frameBorder="0" allowFullScreen />);
+
+		const screenShotUrl = `https://i.ytimg.com/vi/${mediaId}/hqdefault.jpg`;
+
+		mainMedia = (
+			<div
+				data-mediaid={ mediaId }
+				className={ classnames(styles[mediaType], 'js-video-placeholder', styles.videoPlaceholder) }
+				style={{
+					backgroundImage: `url(https://i.ytimg.com/vi/${ mediaId }/hqdefault.jpg)`,
+				}}
+			>
+				<Icon className={ styles.playIcon } icon="play" center size="Yt"/>
+
+				<YtPlaybar />
+
+					{/*<img className="youtube-player" data-mediaid={ mediaId } src={ screenShotUrl } />*/}
+			</div>
+		);
+
+
 	} else if (type === 'slideshare') {
 		mediaType = 'slideshare';
 		embedURL = `//www.slideshare.net/slideshow/embed_code/key/${mediaId}`;
-		mainMedia = (<iframe src={ embedURL } frameBorder="0" allowFullScreen />)
+		mainMedia = (
+			<div className={ styles[mediaType] }>
+				<iframe src={ embedURL } frameBorder="0" allowFullScreen />
+			</div>
+		)
 	}
 
 	const description = showDesc && MEDIADATA[type][mediaId].desc ? MEDIADATA[type][mediaId].desc : null;
@@ -46,9 +73,7 @@ export default ({ type, mediaId, no, showTitle = true, showDesc = true }) => {
 	return (
 		<ContentBox no={no} >
 			<div className={ styles.media }>
-				<div className={ styles[mediaType] }>
 					{ mainMedia }
-				</div>
 			</div>
 			{ text }
 		</ContentBox>

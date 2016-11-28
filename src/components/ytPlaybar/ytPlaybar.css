@@ -1,0 +1,27 @@
+.playbar {
+    height: 36px;
+    line-height: 36px;
+    padding: 0 12px;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+
+    background-color: rgba(0, 0, 0, .1);
+    border-top: 3px solid rgba(255,255,255,.2);
+}
+
+.playbar svg {
+    fill: #E8E8E8;
+}
+
+.leftCtrl {
+    float: left;
+    height: 36px;
+}
+
+.rightCtrl {
+    float: right;
+    height: 36px;
+}

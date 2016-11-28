@@ -10,6 +10,9 @@
     padding-bottom: 56.25%;
     height: 0;
     background-color: #252621;
+
+    background-position: 50% 50%;
+    background-size: cover;
 }
 
 .slideshare {
@@ -32,6 +35,13 @@
 }
 
 
+/*.video:hover svg {*/
+    /*fill: #E62117; !* YouTube Red *!*/
+/*}*/
+
+.playIcon {
+    fill: #E8E8E8;
+}
 
 .text {
     padding: 2em 0;
@@ -39,4 +49,25 @@
 
 .description {
     padding: 2em 0;
+}
+
+.js-video-placeholder {
+    cursor: pointer;
+}
+
+.js-video-placeholder:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .2;
+    transition: opacity 180ms;
+    /* z-index: -1; */
+}
+
+.js-video-placeholder:hover:after {
+    opacity: 0;
 }

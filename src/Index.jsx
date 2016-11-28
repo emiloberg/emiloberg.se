@@ -8,6 +8,8 @@ import globalStyle from './index.css';
 
 import Media from 'components/media/media'
 
+
+
 /**
  * decs={['SingleWhiteSlantedBox']}
  * decs="SingleWhiteSlantedBox"
@@ -18,85 +20,84 @@ import Media from 'components/media/media'
 //
 //
 
-document.addEventListener("DOMContentLoaded",
-	function() {
-		var div, n,
-			v = document.getElementsByClassName("youtube-player");
-		for (n = 0; n < v.length; n++) {
-			div = document.createElement("div");
-			div.setAttribute("data-id", v[n].dataset.id);
-			div.innerHTML = labnolThumb(v[n].dataset.id);
-			div.onclick = labnolIframe;
-			v[n].appendChild(div);
-		}
-	});
-
-function labnolThumb(id) {
-	return `<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg">`;
-}
-
-function labnolIframe() {
-	var iframe = document.createElement("iframe");
-	var embed = "https://www.youtube.com/embed/ID?autoplay=1";
-	iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
-	iframe.setAttribute("frameborder", "0");
-	iframe.setAttribute("allowfullscreen", "1");
-	this.parentNode.replaceChild(iframe, this);
-}
-
-const descRapidFrontEndDevelopment = 'Presented at <a href="https://web.liferay.com/web/northamerica2014/home">Liferay North American Symposium</a>, Boston, USA and at <a href="https://web.liferay.com/web/devcon2014">Liferay DevCon</a> Darmstadt, Germany';
+// document.addEventListener("DOMContentLoaded",
+// 	function() {
+// 		var div, n,
+// 			v = document.getElementsByClassName("youtube-player");
+// 		for (n = 0; n < v.length; n++) {
+// 			div = document.createElement("div");
+// 			div.setAttribute("data-id", v[n].dataset.id);
+// 			div.innerHTML = labnolThumb(v[n].dataset.id);
+// 			div.onclick = labnolIframe;
+// 			v[n].appendChild(div);
+// 		}
+// 	});
+//
+// function labnolThumb(id) {
+// 	return `<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg">`;
+// }
+//
+// function labnolIframe() {
+// 	var iframe = document.createElement("iframe");
+// 	var embed = "https://www.youtube.com/embed/ID?autoplay=1";
+// 	iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
+// 	iframe.setAttribute("frameborder", "0");
+// 	iframe.setAttribute("allowfullscreen", "1");
+// 	this.parentNode.replaceChild(iframe, this);
+// }
 
 export default () => (
 	<div>
-		<div className="youtube-player" data-id="R98cdsq1qxA"></div>
-		{/*<Section*/}
-			{/*bg="LightBlue"*/}
-			{/*padding="Medium"*/}
-		{/*>*/}
-			{/*<Media*/}
-				{/*no="3"*/}
-				{/*mediaId="eWmkBNBTbMM"*/}
-				{/*type="yt"*/}
-			{/*/>*/}
-			{/*<Media*/}
-				{/*no="3"*/}
-				{/*mediaId="R98cdsq1qxA"*/}
-				{/*type="yt"*/}
-			{/*/>*/}
 
-			{/*<Media*/}
-				{/*no="3"*/}
-				{/*mediaId="f9x7wL16KIk"*/}
-				{/*type="yt"*/}
-			{/*/>*/}
-		{/*</Section>*/}
+		{/*<div className="youtube-player" data-id="R98cdsq1qxA"></div>*/}
+		<Section
+			bg="LightBlue"
+			padding="Medium"
+		>
+			<Media
+				no="3"
+				mediaId="eWmkBNBTbMM"
+				type="yt"
+			/>
+			<Media
+				no="3"
+				mediaId="R98cdsq1qxA"
+				type="yt"
+			/>
 
-		{/*<Section*/}
-			{/*bg="LightBlue"*/}
-			{/*padding="Medium"*/}
-		{/*>*/}
-			{/*<Media*/}
-				{/*no="2"*/}
-				{/*mediaId="xLi3nBB6XeuOCK"*/}
-				{/*type="slideshare"*/}
-			{/*/>*/}
-		{/*</Section>*/}
+			<Media
+				no="3"
+				mediaId="f9x7wL16KIk"
+				type="yt"
+			/>
+		</Section>
 
-		{/*<Section*/}
-			{/*bg="LightBlue"*/}
-			{/*padding="Medium"*/}
-		{/*>*/}
-			{/*<Media*/}
-				{/*no="2"*/}
-				{/*mediaId="C_ZtQClrVYw"*/}
-				{/*type="yt"*/}
-			{/*/>*/}
-			{/*<Media*/}
-				{/*no="2"*/}
-				{/*mediaId="eWmkBNBTbMM"*/}
-				{/*type="yt"*/}
-			{/*/>*/}
-		{/*</Section>*/}
+		<Section
+			bg="LightBlue"
+			padding="Medium"
+		>
+			<Media
+				no="2"
+				mediaId="xLi3nBB6XeuOCK"
+				type="slideshare"
+			/>
+		</Section>
+
+		<Section
+			bg="LightBlue"
+			padding="Medium"
+		>
+			<Media
+				no="2"
+				mediaId="C_ZtQClrVYw"
+				type="yt"
+			/>
+			<Media
+				no="2"
+				mediaId="eWmkBNBTbMM"
+				type="yt"
+			/>
+		</Section>
 
 
 

@@ -1,0 +1,15 @@
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sizeYt {
+    height: 50px;
+    width: 50px;
+}
+
+.sizeFullHeight {
+    height: 100%;
+}
