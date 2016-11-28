@@ -21,32 +21,31 @@ export default ({ type, mediaId, no, showTitle = true, showDesc = true }) => {
 		embedURL = `https://www.youtube-nocookie.com/embed/${mediaId}?showinfo=0`;
 		const views = DATA.youTubeViews[mediaId];
 		titleURL = `https://www.youtube.com/watch?v=${mediaId}`;
-		mainMedia = (<iframe src={embedURL} frameBorder="0" allowFullScreen />);
 
 		const screenShotUrl = `https://i.ytimg.com/vi/${mediaId}/hqdefault.jpg`;
 
 		mainMedia = (
-			<div
-				data-mediaid={ mediaId }
-				className={ classnames(styles[mediaType], 'js-video-placeholder', styles.videoPlaceholder) }
-				style={{
-					backgroundImage: `url(https://i.ytimg.com/vi/${ mediaId }/hqdefault.jpg)`,
-				}}
-			>
-				<Icon className={ styles.playIcon } icon="play" center size="Yt"/>
-
-				<YtPlaybar />
-
-					{/*<img className="youtube-player" data-mediaid={ mediaId } src={ screenShotUrl } />*/}
+			<div className={ classnames(styles[mediaType], styles.responsiveInner) }>
+				<div
+					data-mediaid={ mediaId }
+					className={ classnames(styles.videoPlaceholder, 'js-video-placeholder') }
+					style={{
+						backgroundImage: `url(${screenShotUrl})`,
+					}}
+				>
+					<Icon className={ styles.playIcon } icon="play" center size="Yt"/>
+					<YtPlaybar />
+				</div>
 			</div>
 		);
 
 
+
 	} else if (type === 'slideshare') {
 		mediaType = 'slideshare';
-		embedURL = `//www.slideshare.net/slideshow/embed_code/key/${mediaId}`;
+		embedURL = `//www.slideshare.net/slideshow/embed_code/key/${mediaId}?startSlide=2`;
 		mainMedia = (
-			<div className={ styles[mediaType] }>
+			<div className={ classnames(styles[mediaType], styles.responsiveInner) }>
 				<iframe src={ embedURL } frameBorder="0" allowFullScreen />
 			</div>
 		)

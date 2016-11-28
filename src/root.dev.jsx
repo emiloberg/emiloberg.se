@@ -19,11 +19,7 @@ if (module.hot) {
 			iframe.setAttribute('src', embed.replace('ID', e.target.dataset.mediaid));
 			iframe.setAttribute('frameborder', '0');
 			iframe.setAttribute('allowfullscreen', '1');
-			console.log('e.target', e.target);
-			e.target.innerHTML = '';
-			e.target.appendChild(iframe);
-			e.target.classList.remove('js-video-placeholder');
-			e.target.removeEventListener('click');
+			e.target.parentNode.replaceChild(iframe, e.target);
 		});
 	});
 }());

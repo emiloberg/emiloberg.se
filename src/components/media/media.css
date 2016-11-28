@@ -2,31 +2,7 @@
     box-shadow: 10px 10px 60px rgba(0, 0, 0, 0.5);
 }
 
-.video {
-    float: none;
-    clear: both;
-    width: 100%;
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    background-color: #252621;
-
-    background-position: 50% 50%;
-    background-size: cover;
-}
-
-.slideshare {
-    float: none;
-    clear: both;
-    width: 100%;
-    position: relative;
-    padding-bottom: 81.51%;
-    height: 0;
-    background-color: #fff;
-}
-
-.slideshare iframe,
-.video iframe {
+.media iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -34,14 +10,55 @@
     height: 100%;
 }
 
+.responsiveInner {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    height: 0;
+}
 
-/*.video:hover svg {*/
-    /*fill: #E62117; !* YouTube Red *!*/
-/*}*/
+.video {
+    padding-bottom: 56.25%;
+    background-color: #252621;
+}
+
+.slideshare {
+    padding-bottom: 81.51%;
+    background-color: #fff;
+}
+
+.videoPlaceholder {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+
+.videoPlaceholder:after {
+    cursor: pointer;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0;
+    transition: opacity 180ms;
+    /* z-index: -1; */
+}
+
+.videoPlaceholder:hover:after {
+    opacity: .2;
+}
 
 .playIcon {
     fill: #E8E8E8;
 }
+
 
 .text {
     padding: 2em 0;
@@ -49,25 +66,4 @@
 
 .description {
     padding: 2em 0;
-}
-
-.js-video-placeholder {
-    cursor: pointer;
-}
-
-.js-video-placeholder:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: .2;
-    transition: opacity 180ms;
-    /* z-index: -1; */
-}
-
-.js-video-placeholder:hover:after {
-    opacity: 0;
 }
