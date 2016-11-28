@@ -88,6 +88,10 @@ module.exports = {
 			test: /\.json$/,
 			loaders: ['json-loader'],
 			exclude: /node_modules/
+		}, {
+			test: /\.jpg?$/,
+			loaders: ['file-loader'],
+			exclude: /node_modules/
 		},
 			{ test: /\.svg$/, loader: 'babel?presets[]=es2015,presets[]=react!svg-react' }
 		]

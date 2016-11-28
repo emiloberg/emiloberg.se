@@ -48,8 +48,6 @@ import Media from 'components/media/media'
 
 export default () => (
 	<div>
-
-		{/*<div className="youtube-player" data-id="R98cdsq1qxA"></div>*/}
 		<Section
 			bg="LightBlue"
 			padding="Medium"

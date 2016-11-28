@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import ContentBox from 'components/contentbox/contentbox';
 import Icon from 'components/icon/icon';
 import YtPlaybar from 'components/ytPlaybar/ytPlaybar';
+import SsPlaybar from 'components/ssPlaybar/ssPlaybar';
 
 import styles from './media.css'
 
@@ -28,7 +29,7 @@ export default ({ type, mediaId, no, showTitle = true, showDesc = true }) => {
 			<div className={ classnames(styles[mediaType], styles.responsiveInner) }>
 				<div
 					data-mediaid={ mediaId }
-					className={ classnames(styles.videoPlaceholder, 'js-video-placeholder') }
+					className={ classnames(styles.placeholder, styles.videoPlaceholder, 'js-video-placeholder') }
 					style={{
 						backgroundImage: `url(${screenShotUrl})`,
 					}}
@@ -44,11 +45,26 @@ export default ({ type, mediaId, no, showTitle = true, showDesc = true }) => {
 	} else if (type === 'slideshare') {
 		mediaType = 'slideshare';
 		embedURL = `//www.slideshare.net/slideshow/embed_code/key/${mediaId}?startSlide=2`;
+		// mainMedia = (
+		// 	<div className={ classnames(styles[mediaType], styles.responsiveInner) }>
+		// 		<iframe src={ embedURL } frameBorder="0" allowFullScreen />
+		// 	</div>
+		// )
+
+		const placeholderImageUrl = require('../../../data/placeholders/slideshare/' + mediaId + '.jpg');
+
 		mainMedia = (
 			<div className={ classnames(styles[mediaType], styles.responsiveInner) }>
-				<iframe src={ embedURL } frameBorder="0" allowFullScreen />
+				<div
+					className={ styles.placeholder }
+					style={{
+						backgroundImage: `url(${placeholderImageUrl})`,
+					}}
+				>
+					<SsPlaybar mediaId={ mediaId } />
+				</div>
 			</div>
-		)
+		);
 	}
 
 	const description = showDesc && MEDIADATA[type][mediaId].desc ? MEDIADATA[type][mediaId].desc : null;

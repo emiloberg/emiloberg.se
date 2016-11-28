@@ -1,0 +1,71 @@
+.playbar {
+    height: 44px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+
+    background-color: #323232;
+}
+
+
+
+
+.progressBarWrapper {
+    height: 6px;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+}
+
+.bufferBar {
+    background-color: #4d4d4d;
+    height: 6px;
+    margin-bottom: -6px;
+    width: 100%;
+}
+
+.activeBar {
+    background-color: #007bb6;
+    height: 6px;
+}
+
+
+
+.prevNextBar {
+    height: 38px;
+    text-align: center;
+    display: flex;
+    margin-top: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.prevNext {
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    height: 0;
+    width: 0;
+}
+
+.prev {
+    border-right: 18px solid #5C5C5C;
+
+}
+
+.next {
+    border-left: 18px solid #fff;
+}
+
+.next:hover {
+    border-left-color: #d6d6d6;
+}
+
+.slideNumbers {
+    color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 12px;
+    margin: 0 10px;
+}
