@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import styles from './section.css';
 import gStyles from '../../index.css';
 
-export default ({ decs, bg, cols, padding, children }) => {
+export default ({ decs, bg, padding, children }) => {
 
 	let decoratorItems = null;
 
@@ -18,11 +18,11 @@ export default ({ decs, bg, cols, padding, children }) => {
 	}
 
 	return (
-		<div className={ classnames(styles.selection, styles['bg' + bg]) }>
-				{ decoratorItems }
-				<div className={ classnames(styles['padding' + padding], gStyles.container, styles['cols' + cols]) }>
+		<div className={ classnames(styles.section, styles['bg' + bg], styles['padding' + padding]) }>
+				{/*{ decoratorItems }*/}
+				{/*<div className={ classnames(styles['padding' + padding], gStyles.container) }>*/}
 					{ children }
-				</div>
+				{/*</div>*/}
 		</div>
 	)
 };

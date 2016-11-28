@@ -12,7 +12,6 @@ import { formatThousands } from 'shared/formatNumber';
 export default ({ ytId, title, showViews }) => {
 	const embedURL = `https://www.youtube-nocookie.com/embed/${ytId}?showinfo=0`;
 	const views = DATA.youTubeViews[ytId];
-
 	const ytURL = `https://www.youtube.com/watch?v=${ytId}`;
 
 	const Views = (

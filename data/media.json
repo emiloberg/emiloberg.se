@@ -1,0 +1,26 @@
+{
+    "yt": {
+        "R98cdsq1qxA": {
+            "title": "NativeScript vs. PhoneGap, React, Titanium, Ionic, etc"
+        },
+        "eWmkBNBTbMM": {
+            "title": "Webpack 2 - A full tutorial"
+        },
+        "f9x7wL16KIk": {
+            "title": "Rapid Frontend Development - For Everyone!",
+            "desc": "Presented at <a href=\"https://web.liferay.com/web/northamerica2014/home\">Liferay North American Symposium</a>, Boston, USA and at <a href=\"https://web.liferay.com/web/devcon2014\">Liferay DevCon</a> Darmstadt, Germany"
+        },
+        "C_ZtQClrVYw": {
+            "title": "Webpack 2 vs Browserify, Grunt, Gulp, Rollup"
+        },
+        "qWhjNiy9fuU": {
+            "title": "DIY Ladder Ceiling Lamp controlled by Telldus + Node-RED"
+        }
+    },
+    "slideshare": {
+        "xLi3nBB6XeuOCK": {
+            "title": "How to create productive agile teams in uninhabitable organisations",
+            "desc": "Held at <a href=\"http://www.jboye.com/\">J.Boye Conference</a> Aarhus, Denmark"
+        }
+    }
+}
