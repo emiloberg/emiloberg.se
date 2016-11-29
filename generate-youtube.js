@@ -1,5 +1,6 @@
 const fetch = require('node-fetch');
 const fs = require('fs');
+const http = require('http');
 
 const APIKEY = 'AIzaSyDiRMDUcnmm_wSVhYLo0vhAekHyGhIzkcw';
 const ytVideos = require('./data/media.json');
@@ -16,10 +17,32 @@ function getYouTubeViews() {
 		.then(res => res.map(video => {
 			out[video.items[0].id] = video.items[0].statistics.viewCount
 		}))
-		.then(() => out);
+		.then(() => out)
+		.then(res => {
+			fs.writeFileSync('./temp/yt-views.json', JSON.stringify(res));
+		});
 }
 
-getYouTubeViews()
-	.then(res => {
-		fs.writeFileSync('./temp/yt-views.json', JSON.stringify(res));
+function dlPreviews() {
+	videoIDs.forEach((id) => {
+		const file = fs.createWriteStream(`./temp/${id}.jpg`);
+		const request = http.get(`http://img.youtube.com/vi/${id}/maxresdefault.jpg`, function(response) {
+			response.pipe(file);
+		});
 	});
+}
+
+function createTempDir() {
+	return new Promise(resolve => {
+		fs.mkdir('./temp', () => {
+			resolve();
+		});
+	});
+}
+
+
+(function(){
+	createTempDir()
+		.then(getYouTubeViews)
+		.then(dlPreviews);
+}());

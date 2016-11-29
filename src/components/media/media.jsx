@@ -23,16 +23,29 @@ export default ({ type, mediaId, no, showTitle = true, showDesc = true }) => {
 		const views = DATA.youTubeViews[mediaId];
 		titleURL = `https://www.youtube.com/watch?v=${mediaId}`;
 
-		const screenShotUrl = `https://i.ytimg.com/vi/${mediaId}/hqdefault.jpg`;
+		const screenShotUrl = `https://i.ytimg.com/vi/${mediaId}/maxresdefault.jpg`;
+
+		// mainMedia = (
+		// 	<div className={ classnames(styles[mediaType], styles.responsiveInner) }>
+		// 		<div
+		// 			data-mediaid={ mediaId }
+		// 			className={ classnames(styles.placeholder, styles.videoPlaceholder, 'js-video-placeholder') }
+		// 			style={{
+		// 				backgroundImage: `url(${screenShotUrl})`,
+		// 			}}
+		// 		>
+		// 			<Icon className={ styles.playIcon } icon="play" center size="Yt"/>
+		// 			<YtPlaybar />
+		// 		</div>
+		// 	</div>
+		// );
 
 		mainMedia = (
 			<div className={ classnames(styles[mediaType], styles.responsiveInner) }>
 				<div
 					data-mediaid={ mediaId }
-					className={ classnames(styles.placeholder, styles.videoPlaceholder, 'js-video-placeholder') }
-					style={{
-						backgroundImage: `url(${screenShotUrl})`,
-					}}
+					className={ classnames(styles.placeholder, styles.videoPlaceholder, 'js-video-placeholder', 'b-lazy') }
+					data-src={screenShotUrl}
 				>
 					<Icon className={ styles.playIcon } icon="play" center size="Yt"/>
 					<YtPlaybar />

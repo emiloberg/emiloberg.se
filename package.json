@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist && NODE_ENV=production webpack",
-    "dev": "NODE_ENV=development node dev-server.js"
+    "build": "rimraf dist && NODE_ENV=production webpack && node fix-index.js && rimraf dist/bundle.css",
+    "dev": "NODE_ENV=development node dev-server.js",
+    "generate": "rimraf temp && node generate-youtube.js"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,7 @@
     "json-loader": "^0.5.4",
     "node-fetch": "^1.6.3",
     "react-hot-loader": "^3.0.0-beta.6",
+    "replace": "^0.3.0",
     "rimraf": "^2.5.4",
     "static-site-generator-webpack-plugin": "^3.1.0",
     "style-loader": "^0.13.1",
@@ -31,6 +33,7 @@
     "webpack-dev-server": "^2.1.0-beta.9"
   },
   "dependencies": {
+    "blazy": "^1.8.2",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-hot-loader": "^1.3.0",

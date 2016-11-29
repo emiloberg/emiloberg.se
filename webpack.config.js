@@ -6,6 +6,9 @@ var path = require('path');
 const DEVELOPMENT = process.env.NODE_ENV === 'development';
 const PRODUCTION = process.env.NODE_ENV === 'production';
 
+console.log('DEVELOPMENT', DEVELOPMENT);
+console.log('PRODUCTION', PRODUCTION);
+
 const DATA_YOUTUBE = require('./temp/yt-views.json');
 
 const paths = ['/'];
@@ -42,16 +45,19 @@ plugins.push(
 	})
 );
 
-const cssSelectorName = '[name]__[local]___[hash:base64:5]';
+const cssSelectorName = '';
 const cssLoaderParts = [
-	'css-loader?sourceMap&modules&importLoaders=1&localIdentName=' + cssSelectorName + ''
+
 ];
 
 const cssLoader = PRODUCTION
 	?	ExtractTextPlugin.extract({
-			loader: cssLoaderParts.join('!')
+			loader: 'css-loader?minimize&sourceMap&modules&importLoaders=1&localIdentName=[hash:base64:7]'
 		})
-	: 	'style!' + cssLoaderParts.join('!');
+	: 	'style!css-loader?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]';
+
+
+// const cssLoader = 'style!' + cssLoaderParts.join('!');
 
 console.log(path.resolve(__dirname, 'src/shared'));
 

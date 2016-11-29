@@ -11,3 +11,9 @@ http://lanyrd.com/2013/jboye13/
 http://lanyrd.com/2014/intranatverk/
 http://lanyrd.com/2013/intrateam-event-stockholm/
 http://lanyrd.com/2013/intranatverk/
+
+
+
+Todo:
+* Ladda in bilder från YouTube och gör responsiva ( if needed )
+* Gör fallback <noscript> för embeds 

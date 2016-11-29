@@ -50,6 +50,12 @@ export default () => (
 	<div>
 		<Section
 			bg="LightBlue"
+			padding="Large"
+		>
+			Hej
+		</Section>
+		<Section
+			bg="LightBlue"
 			padding="Medium"
 		>
 			<Media
