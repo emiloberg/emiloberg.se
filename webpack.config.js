@@ -6,9 +6,6 @@ var path = require('path');
 const DEVELOPMENT = process.env.NODE_ENV === 'development';
 const PRODUCTION = process.env.NODE_ENV === 'production';
 
-console.log('DEVELOPMENT', DEVELOPMENT);
-console.log('PRODUCTION', PRODUCTION);
-
 const DATA_YOUTUBE = require('./temp/yt-views.json');
 
 const paths = ['/'];
@@ -44,11 +41,6 @@ plugins.push(
 		}
 	})
 );
-
-const cssSelectorName = '';
-const cssLoaderParts = [
-
-];
 
 const cssLoader = PRODUCTION
 	?	ExtractTextPlugin.extract({
