@@ -12,7 +12,7 @@ import styles from './media.css'
 const MEDIADATA = require('../../../data/media.json');
 
 export default ({ type, mediaId, no, showTitle = true, showDesc = true }) => {
-	let titleURL;
+	let mediaURL;
 
 	let embedURL;
 	let mediaType;
@@ -20,13 +20,14 @@ export default ({ type, mediaId, no, showTitle = true, showDesc = true }) => {
 	if (type === 'yt') {
 		mediaType = 'video';
 		const views = DATA.youTubeViews[mediaId];
-		titleURL = `https://www.youtube.com/watch?v=${mediaId}`;
+		mediaURL = `https://www.youtube.com/watch?v=${mediaId}`;
 		const placeholderImg = require(`responsive?placeholder=true&sizes[]=320,sizes[]=640!../../../temp/${mediaId}.jpg`);
 
 		mainMedia = (
-			<a href={ titleURL }>
+			<a href={ mediaURL } rel="noopener" className="js-disabled">
 			<div className={ classnames(styles[mediaType], styles.responsiveInner) }>
 				<div
+					aria-hidden="true"
 					data-mediaid={ mediaId }
 					className={ classnames(styles.placeholder, styles.videoPlaceholder, 'js-video-placeholder', 'lazy') }
 					data-src={ placeholderImg.src + '|' +  placeholderImg.images[1].path }
@@ -37,9 +38,7 @@ export default ({ type, mediaId, no, showTitle = true, showDesc = true }) => {
 				<div className={ styles.fallback }>
 					<div
 						className={ styles.placeholder }
-						style={{
-							backgroundImage: `url('${placeholderImg.src}?fallback')`
-						}}
+						style={{ backgroundImage: `url('${placeholderImg.src}?fallback')` }}
 					/>
 				</div>
 			</div>
@@ -47,17 +46,27 @@ export default ({ type, mediaId, no, showTitle = true, showDesc = true }) => {
 		);
 	} else if (type === 'slideshare') {
 		mediaType = 'slideshare';
+		mediaURL = MEDIADATA.slideshare[mediaId].url;
 		const placeholderImg = require(`responsive?placeholder=true&sizes[]=510,sizes[]=1020!../../../data/placeholders/slideshare/${mediaId}.jpg`);
 
 		mainMedia = (
+			<a href={ mediaURL } rel="noopener" className="js-disabled">
 			<div className={ classnames(styles[mediaType], styles.responsiveInner) }>
 				<div
-					className={ classnames(styles.placeholder, 'lazy') }
+					aria-hidden="true"
+					className={ classnames(styles.placeholder, 'lazy', styles.jsPlaceholder) }
 					data-src={ placeholderImg.src + '|' +  placeholderImg.images[1].path }
 				>
 					<SsPlaybar mediaId={ mediaId } />
 				</div>
+				<div className={ styles.fallback }>
+					<div
+						className={ styles.placeholder }
+						style={{ backgroundImage: `url('${placeholderImg.src}?fallback')` }}
+					/>
+				</div>
 			</div>
+			</a>
 		);
 	}
 
@@ -67,8 +76,8 @@ export default ({ type, mediaId, no, showTitle = true, showDesc = true }) => {
 		: 	null;
 
 	const wrappedTitle = showTitle
-		?	titleURL
-				? <a href={ titleURL } rel="noopener"><h3>{ MEDIADATA[type][mediaId].title }</h3></a>
+		?	mediaURL
+				? <a href={ mediaURL } rel="noopener"><h3>{ MEDIADATA[type][mediaId].title }</h3></a>
 				: <h3>{ MEDIADATA[type][mediaId].title }</h3>
 		:	null;
 

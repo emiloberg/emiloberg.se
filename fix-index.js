@@ -31,6 +31,6 @@ replace({
 
 replace({
 	regex: '<body class="no-js">',
-	replacement: '<body><script>' + fixedBrowserHeadContent + '</script>',
+	replacement: '<body class="no-js"><script>' + fixedBrowserHeadContent + '</script>',
 	paths: ['./dist/index.html']
 });

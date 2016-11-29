@@ -1,6 +1,10 @@
 import Blazy from 'blazy'
 
 (function(){
+
+	/**
+	 * Load YouTube iframe when clicking on a placeholder
+	 */
 	const videos = document.querySelectorAll('.js-video-placeholder');
 	videos.forEach(video => {
 		video.addEventListener('click', (e) => {
@@ -13,6 +17,9 @@ import Blazy from 'blazy'
 		});
 	});
 
+	/**
+	 * Load Slideshare iframe when clicking on a placeholder
+	 */
 	const slides = document.querySelectorAll('.js-slideshare-next');
 	slides.forEach(slide => {
 		slide.addEventListener('click', (e) => {
@@ -26,6 +33,19 @@ import Blazy from 'blazy'
 
 			toBeReplaced.parentNode.replaceChild(iframe, toBeReplaced);
 		});
+	});
+
+	/**
+	 * Without Javascript clicking on a video/slide/etc
+	 * will take the user to YouTube/SlideShare/etc
+	 *
+	 * Disable those links for users with JS (as we then load the
+	 * content on the page)
+	 *
+	 */
+	const jsDisabledLinks = document.querySelectorAll('.js-disabled');
+	jsDisabledLinks.forEach(link => {
+		link.addEventListener('click', (e) => { e.preventDefault(); })
 	});
 
 	var bLazy = new Blazy({
