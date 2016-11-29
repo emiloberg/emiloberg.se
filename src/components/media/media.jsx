@@ -24,6 +24,7 @@ export default ({ type, mediaId, no, showTitle = true, showDesc = true }) => {
 		const placeholderImg = require(`responsive?placeholder=true&sizes[]=320,sizes[]=640!../../../temp/${mediaId}.jpg`);
 
 		mainMedia = (
+			<a href={ titleURL }>
 			<div className={ classnames(styles[mediaType], styles.responsiveInner) }>
 				<div
 					data-mediaid={ mediaId }
@@ -33,7 +34,16 @@ export default ({ type, mediaId, no, showTitle = true, showDesc = true }) => {
 					<Icon className={ styles.playIcon } icon="play" center size="Yt" classes />
 					<YtPlaybar className={ styles.playbar } />
 				</div>
+				<div className={ styles.fallback }>
+					<div
+						className={ styles.placeholder }
+						style={{
+							backgroundImage: `url('${placeholderImg.src}?fallback')`
+						}}
+					/>
+				</div>
 			</div>
+			</a>
 		);
 	} else if (type === 'slideshare') {
 		mediaType = 'slideshare';

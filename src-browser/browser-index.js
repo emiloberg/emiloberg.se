@@ -4,8 +4,9 @@ import Blazy from 'blazy'
 	const videos = document.querySelectorAll('.js-video-placeholder');
 	videos.forEach(video => {
 		video.addEventListener('click', (e) => {
+			e.preventDefault();
 			const iframe = document.createElement('iframe');
-			iframe.setAttribute('src', `//www.youtube.com/embed/${e.target.dataset.mediaid}?autoplay=1`);
+			iframe.setAttribute('src', `//www.youtube.com/embed/${e.target.dataset.mediaid}?autoplay=1&?rel=0&showinfo=0`);
 			iframe.setAttribute('frameborder', '0');
 			iframe.setAttribute('allowfullscreen', '1');
 			e.target.parentNode.replaceChild(iframe, e.target);
@@ -15,6 +16,7 @@ import Blazy from 'blazy'
 	const slides = document.querySelectorAll('.js-slideshare-next');
 	slides.forEach(slide => {
 		slide.addEventListener('click', (e) => {
+			e.preventDefault();
 			const iframe = document.createElement('iframe');
 			iframe.setAttribute('src', `//www.slideshare.net/slideshow/embed_code/key/${e.target.dataset.mediaid}?startSlide=2`);
 			iframe.setAttribute('frameborder', '0');

@@ -11,7 +11,7 @@ const html = `<!DOCTYPE html>
   <title>React Static Website</title>
   <link rel="stylesheet" href="bundle.css">
 </head>
-<body>
+<body class="no-js">
 	${ReactDOMServer.renderToStaticMarkup(<Index />)}
 </body>
 </html>`;

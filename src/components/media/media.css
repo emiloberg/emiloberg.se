@@ -67,6 +67,14 @@
     background-color: rgba(31,31,31,0.51);
 }
 
+:global(.no-js) .videoPlaceholder {
+    display: none;
+}
+
+:global(.js) .fallback {
+    display: none;
+}
+
 .playIcon {
     fill: #1f1f1f;
 }
