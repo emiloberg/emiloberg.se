@@ -30,8 +30,8 @@ export default ({ type, mediaId, no, showTitle = true, showDesc = true }) => {
 					className={ classnames(styles.placeholder, styles.videoPlaceholder, 'js-video-placeholder', 'lazy') }
 					data-src={ placeholderImg.src + '|' +  placeholderImg.images[1].path }
 				>
-					<Icon className={ styles.playIcon } icon="play" center size="Yt"/>
-					<YtPlaybar />
+					<Icon className={ styles.playIcon } icon="play" center size="Yt" classes />
+					<YtPlaybar className={ styles.playbar } />
 				</div>
 			</div>
 		);
