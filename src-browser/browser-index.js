@@ -48,6 +48,9 @@ import Blazy from 'blazy'
 		link.addEventListener('click', (e) => { e.preventDefault(); })
 	});
 
+	/**
+	 * Init Lazy Load
+	 */
 	var bLazy = new Blazy({
 		selector: '.lazy'
 	});
@@ -67,5 +70,55 @@ import Blazy from 'blazy'
 	// 		}, 200);
 	// 	}
 	// });
+
+
+	/**
+	 * Ask YouTube for the latest view count and update if found
+ 	 */
+
+	// TODO: WORK HERE
+	// Se till att läsa från session storage om den finns, annars göra ett call
+	// Kolla mot timestamp att det inte är för gammalt
+	// if(!!localStorage)
+
+	// När klar: Ändra så att den inte uppdaterar direkt utan efter ett par sekunder
+
+	setTimeout(() => {
+		const APIKEY = require('./../ytPublicApiKey.json').key;
+		const elsYtViews = document.querySelectorAll('.js-yt-views');
+		const ids = [];
+		elsYtViews.forEach(el => { ids.push(el.dataset.mediaid); });
+		const idsString = ids.join('%2C');
+		var xhr = new XMLHttpRequest();
+		const saveToStorage = {
+			timestamp: Date.now()
+		};
+		xhr.open('GET', 'https://www.googleapis.com/youtube/v3/videos?id=' + idsString + '&key=' + APIKEY + '&part=statistics');
+		xhr.onload = function() {
+			if (xhr.status === 200) {
+				try {
+					const data = JSON.parse(xhr.responseText);
+					data.items.forEach(item => {
+						updateViews(item.id, item.statistics.viewCount);
+						saveToStorage[item.id] = item.statistics.viewCount;
+					});
+
+					localStorage.setItem('views', JSON.stringify(saveToStorage));
+				} catch(e) {
+					// Silently fail
+				}
+			}
+		};
+		xhr.send();
+	}, 0);
+
+	function updateViews(id, views) {
+		const elCur = document.querySelector(".js-yt-views[data-mediaid='" + id + "']");
+		elCur.style.opacity = 0;
+		setTimeout(() => {
+			elCur.style.opacity = 1;
+			elCur.innerHTML = views;
+		}, 500); // Same timeout as css transition time
+	}
 
 }());

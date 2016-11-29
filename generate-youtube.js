@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 const fs = require('fs');
 const http = require('http');
 
-const APIKEY = 'AIzaSyDiRMDUcnmm_wSVhYLo0vhAekHyGhIzkcw';
+const APIKEY = require('./ytPublicApiKey.json').key;
 const ytVideos = require('./data/media.json');
 const videoIDs = Object.keys(ytVideos.yt).map(key => key);
 const videoURLs = videoIDs.map((id) => (

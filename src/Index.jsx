@@ -62,11 +62,13 @@ export default () => (
 				no="3"
 				mediaId="eWmkBNBTbMM"
 				type="yt"
+				showViews
 			/>
 			<Media
 				no="3"
 				mediaId="R98cdsq1qxA"
 				type="yt"
+				showViews
 			/>
 
 			<Media

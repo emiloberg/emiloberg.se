@@ -15,5 +15,6 @@ http://lanyrd.com/2013/intranatverk/
 
 
 Todo:
-* Ladda in bilder från YouTube och gör responsiva ( if needed )
-* Gör fallback <noscript> för embeds 
+
+* fixa in breakpoints för previews i javascript enabled-läget
+* hämta antal views från youtube direkt

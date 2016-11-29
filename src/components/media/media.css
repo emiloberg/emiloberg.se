@@ -28,6 +28,10 @@
     background-color: #fff;
 }
 
+:global(.js) .slideshare {
+    cursor: default;
+}
+
 .placeholder {
     width: 100%;
     height: 100%;
@@ -67,11 +71,17 @@
     background-color: rgba(31,31,31,0.51);
 }
 
+.viewCount {
+    transition: opacity 500ms;
+}
+
 :global(.js) .fallback,
-:global(.no-js) .jsPlaceholder,
+:global(.no-js) .ssPlaceholder,
 :global(.no-js) .videoPlaceholder {
     display: none;
 }
+
+
 
 .playIcon {
     fill: #1f1f1f;

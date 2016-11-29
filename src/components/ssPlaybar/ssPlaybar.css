@@ -55,6 +55,7 @@
 
 .next {
     border-left: 18px solid #fff;
+    cursor: pointer;
 }
 
 .next:hover {
