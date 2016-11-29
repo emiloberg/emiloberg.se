@@ -26,7 +26,9 @@ import Blazy from 'blazy'
 		});
 	});
 
-	var bLazy = new Blazy();
+	var bLazy = new Blazy({
+		selector: '.lazy'
+	});
 
 	// var bLazy = new Blazy({
 	// 	breakpoints: [{
