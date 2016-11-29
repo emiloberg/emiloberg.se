@@ -46,7 +46,7 @@ const cssLoader = PRODUCTION
 	?	ExtractTextPlugin.extract({
 			loader: 'css-loader?minimize&sourceMap&modules&importLoaders=1&localIdentName=[hash:base64:7]'
 		})
-	: 	'style!css-loader?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]';
+	: 	'style!css-loader?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]';
 
 
 // const cssLoader = 'style!' + cssLoaderParts.join('!');

@@ -52,7 +52,8 @@ import Blazy from 'blazy'
 	 * Init Lazy Load
 	 */
 	var bLazy = new Blazy({
-		selector: '.lazy'
+		selector: '.lazy',
+		successClass: 'loaded'
 	});
 
 	// var bLazy = new Blazy({
@@ -73,17 +74,29 @@ import Blazy from 'blazy'
 
 
 	/**
-	 * Ask YouTube for the latest view count and update if found
+	 * Ask YouTube for the latest view count and update ui if found
  	 */
-
-	// TODO: WORK HERE
-	// Se till att läsa från session storage om den finns, annars göra ett call
-	// Kolla mot timestamp att det inte är för gammalt
-	// if(!!localStorage)
-
-	// När klar: Ändra så att den inte uppdaterar direkt utan efter ett par sekunder
-
 	setTimeout(() => {
+		try {
+			const cacheTimeMinutes = 10;
+			const storedViewsString = localStorage.getItem('views');
+			if (!!storedViewsString) {
+				const storedViews = JSON.parse(storedViewsString);
+				const minutesAgo = (Date.now() - storedViews.timestamp) / 1000 / 60;
+				if (minutesAgo < cacheTimeMinutes) {
+					storedViews.views.forEach((i) => { updateViews(i.id, i.views); });
+				} else {
+					getYtViews();
+				}
+			} else {
+				getYtViews();
+			}
+		} catch(e) {
+			getYtViews();
+		}
+	}, 3000);
+
+	function getYtViews() {
 		const APIKEY = require('./../ytPublicApiKey.json').key;
 		const elsYtViews = document.querySelectorAll('.js-yt-views');
 		const ids = [];
@@ -91,7 +104,8 @@ import Blazy from 'blazy'
 		const idsString = ids.join('%2C');
 		var xhr = new XMLHttpRequest();
 		const saveToStorage = {
-			timestamp: Date.now()
+			timestamp: Date.now(),
+			views: []
 		};
 		xhr.open('GET', 'https://www.googleapis.com/youtube/v3/videos?id=' + idsString + '&key=' + APIKEY + '&part=statistics');
 		xhr.onload = function() {
@@ -100,9 +114,11 @@ import Blazy from 'blazy'
 					const data = JSON.parse(xhr.responseText);
 					data.items.forEach(item => {
 						updateViews(item.id, item.statistics.viewCount);
-						saveToStorage[item.id] = item.statistics.viewCount;
+						saveToStorage.views.push({
+							id:    item.id,
+							views: item.statistics.viewCount
+						});
 					});
-
 					localStorage.setItem('views', JSON.stringify(saveToStorage));
 				} catch(e) {
 					// Silently fail
@@ -110,7 +126,7 @@ import Blazy from 'blazy'
 			}
 		};
 		xhr.send();
-	}, 0);
+	}
 
 	function updateViews(id, views) {
 		const elCur = document.querySelector(".js-yt-views[data-mediaid='" + id + "']");

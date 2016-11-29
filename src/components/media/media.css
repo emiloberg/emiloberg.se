@@ -75,6 +75,17 @@
     transition: opacity 500ms;
 }
 
+.ssPlaceholder,
+.videoPlaceholder {
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+:global(.loaded).ssPlaceholder,
+:global(.loaded).videoPlaceholder {
+    opacity: 1;
+}
+
 :global(.js) .fallback,
 :global(.no-js) .ssPlaceholder,
 :global(.no-js) .videoPlaceholder {
