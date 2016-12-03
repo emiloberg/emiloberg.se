@@ -1,0 +1,23 @@
+.section {
+    width: 100%;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.paddingmedium {
+    padding: 2em 0;
+}
+
+.bgpurple {
+    background-color: #543D95;
+}
+
+.bgblue {
+    background-color: #4155B4;
+}

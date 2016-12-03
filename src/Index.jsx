@@ -1,6 +1,10 @@
 import React from 'react';
 
-import Section from './components/section/section';
+import MainSection from './components/mainSection/mainSection';
+import Headline from './components/headline/headline';
+import Box from './components/box/box';
+import TwoUp from './components/twoUp/twoUp';
+import Text from './components/text/text';
 import LogoName from './components/logoName/logoName';
 import YtVideo from 'components/ytVideo/ytVideo';
 
@@ -48,62 +52,90 @@ import Media from 'components/media/media'
 
 export default () => (
 	<div>
-		<Section
-			bg="LightBlue"
-			padding="Large"
-		>
-			Hej
-		</Section>
-		<Section
-			bg="LightBlue"
-			padding="Medium"
-		>
-			<Media
-				no="3"
-				mediaId="eWmkBNBTbMM"
-				type="yt"
-				showViews
-			/>
-			<Media
-				no="3"
-				mediaId="R98cdsq1qxA"
-				type="yt"
-				showViews
-			/>
+		<MainSection bg="purple">
+			<Headline type="section" icon="tickets">Public Speaking</Headline>
+			<Box>
+				<Media mediaId="eWmkBNBTbMM" type="yt" />
+				<Headline type="single">NativeScript vs. PhoneGap, React, Titanium, Ionic, etc</Headline>
+				<Text>Presented as Uppsala JS</Text>
+			</Box>
+			<TwoUp>
+				<Box type="twoUp" no="first">
+					<Media mediaId="eWmkBNBTbMM" type="yt" />
+					<Headline>NativeScript vs. PhoneGap, React, Titanium, Ionic, etc</Headline>
+					<Text>Presented at Liferay North American Symposium, Boston, USA and at Liferay DevCon Darmstadt, Germany</Text>
+				</Box>
+				<Box type="twoUp" no="last">
+					<Media mediaId="eWmkBNBTbMM" type="yt" />
+					<Headline>NativeScript vs. PhoneGap, React, Titanium, Ionic, etc</Headline>
+					<Text>Presented as Uppsala JS</Text>
+				</Box>
+			</TwoUp>
+			<Box>
+				<Media mediaId="xLi3nBB6XeuOCK" type="slideshare" />
+				<Headline type="single">How to create productive agile teams in uninhabitable organisations</Headline>
+				<Text>Presented at J.Boye Conference Aarhus, Denmark and at Intranätverk, Göteborg, Sweden</Text>
+			</Box>
+		</MainSection>
+		<MainSection bg="blue">
+			<Headline type="section" icon="gift">Client Work</Headline>
+		</MainSection>
+		{/*<Section*/}
+			{/*bg="LightBlue"*/}
+			{/*padding="Large"*/}
+		{/*>*/}
+			{/*Hej*/}
+		{/*</Section>*/}
+		{/*<Section*/}
+			{/*bg="LightBlue"*/}
+			{/*padding="Medium"*/}
+		{/*>*/}
+			{/*<Media*/}
+				{/*no="3"*/}
+				{/*mediaId="eWmkBNBTbMM"*/}
+				{/*type="yt"*/}
+				{/*showViews*/}
+			{/*/>*/}
+			{/*<Media*/}
+				{/*no="3"*/}
+				{/*mediaId="R98cdsq1qxA"*/}
+				{/*type="yt"*/}
+				{/*showViews*/}
+			{/*/>*/}
 
-			<Media
-				no="3"
-				mediaId="f9x7wL16KIk"
-				type="yt"
-			/>
-		</Section>
+			{/*<Media*/}
+				{/*no="3"*/}
+				{/*mediaId="f9x7wL16KIk"*/}
+				{/*type="yt"*/}
+			{/*/>*/}
+		{/*</Section>*/}
 
-		<Section
-			bg="LightBlue"
-			padding="Medium"
-		>
-			<Media
-				no="2"
-				mediaId="xLi3nBB6XeuOCK"
-				type="slideshare"
-			/>
-		</Section>
+		{/*<Section*/}
+			{/*bg="LightBlue"*/}
+			{/*padding="Medium"*/}
+		{/*>*/}
+			{/*<Media*/}
+				{/*no="2"*/}
+				{/*mediaId="xLi3nBB6XeuOCK"*/}
+				{/*type="slideshare"*/}
+			{/*/>*/}
+		{/*</Section>*/}
 
-		<Section
-			bg="LightBlue"
-			padding="Medium"
-		>
-			<Media
-				no="2"
-				mediaId="C_ZtQClrVYw"
-				type="yt"
-			/>
-			<Media
-				no="2"
-				mediaId="eWmkBNBTbMM"
-				type="yt"
-			/>
-		</Section>
+		{/*<Section*/}
+			{/*bg="LightBlue"*/}
+			{/*padding="Medium"*/}
+		{/*>*/}
+			{/*<Media*/}
+				{/*no="2"*/}
+				{/*mediaId="C_ZtQClrVYw"*/}
+				{/*type="yt"*/}
+			{/*/>*/}
+			{/*<Media*/}
+				{/*no="2"*/}
+				{/*mediaId="eWmkBNBTbMM"*/}
+				{/*type="yt"*/}
+			{/*/>*/}
+		{/*</Section>*/}
 
 
 

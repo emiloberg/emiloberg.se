@@ -1,6 +1,5 @@
 .media {
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-    width: 100%;
+    box-shadow: 10px 10px 60px rgba(0, 0, 0, 0.5);
 }
 
 .media iframe {
@@ -72,6 +71,19 @@
     background-color: rgba(31,31,31,0.51);
 }
 
+.viewsNumber {
+    transition: opacity 500ms;
+}
+
+.viewCount {
+    font-size: 2rem;
+    display: inline-block;
+    background: white;
+    padding: .25em 1em;
+    border-radius: 2em;
+    border: 2px solid rebeccapurple;
+}
+
 .ssPlaceholder,
 .videoPlaceholder {
     opacity: 0;
@@ -93,4 +105,14 @@
 
 .playIcon {
     fill: #1f1f1f;
+}
+
+
+
+.text {
+    padding: 2em 0;
+}
+
+.description {
+    padding: 2em 1em;
 }

@@ -1,0 +1,8 @@
+.text {
+    max-width: 550px;
+    font-family: OpenSans, "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    font-size: 2rem;
+}

@@ -90,6 +90,9 @@ module.exports = {
 			test: /\.jpg?$/,
 			loaders: ['file-loader'],
 			exclude: /node_modules/
+		},            {
+			test: /\.(eot|ttf|woff|woff2)$/,
+			loader: 'file?name=[name].[ext]'
 		},
 			{ test: /\.svg$/, loader: 'babel?presets[]=es2015,presets[]=react!svg-react' }
 		]

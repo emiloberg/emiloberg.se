@@ -6,6 +6,9 @@ const YtPlay = require('./svg/ytPlaybarPlay.svg');
 const YtVolume = require('./svg/ytPlaybarVolume.svg');
 const YtYouTube = require('./svg/ytPlaybarYouTube.svg');
 const YtFullScren = require('./svg/ytPlaybarFullScreen.svg');
+const SmileyHeart = require('./svg/smiley-heart.svg');
+const Tickets = require('./svg/tickets.svg');
+const Gift = require('./svg/gift.svg');
 
 import classnames from 'classnames';
 import styles from './icon.css';
@@ -31,5 +34,11 @@ export default ({ icon, center, size, className }) => {
 		return <YtYouTube className={ classnames(cssClasses, className) }/>;
 	} else if (icon === 'ytFullScreen') {
 		return <YtFullScren className={ classnames(cssClasses, className) }/>;
+	} else if (icon === 'smileyHeart') {
+		return <SmileyHeart className={ classnames(cssClasses, className) }/>;
+	} else if (icon === 'tickets') {
+		return <Tickets className={ classnames(cssClasses, className) }/>;
+	} else if (icon === 'gift') {
+		return <Gift className={ classnames(cssClasses, className) }/>;
 	}
 };

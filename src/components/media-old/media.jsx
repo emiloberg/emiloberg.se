@@ -2,6 +2,7 @@ import React from 'react';
 
 import classnames from 'classnames';
 
+import ContentBox from 'components/contentbox/contentbox';
 import Icon from 'components/icon/icon';
 import YtPlaybar from 'components/ytPlaybar/ytPlaybar';
 import SsPlaybar from 'components/ssPlaybar/ssPlaybar';
@@ -10,12 +11,16 @@ import styles from './media.css'
 
 const MEDIADATA = require('../../../data/media.json');
 
-export default ({ type, mediaId, no }) => {
+export default ({ type, mediaId, no, showTitle = true, showDesc = true, showViews }) => {
 	let mediaURL;
+
+	let embedURL;
 	let mediaType;
 	let mainMedia;
+	let views;
 	if (type === 'yt') {
 		mediaType = 'video';
+		views = DATA.youTubeViews[mediaId];
 		mediaURL = `https://www.youtube.com/watch?v=${mediaId}`;
 		const placeholderImg = require(`responsive?placeholder=true&sizes[]=320,sizes[]=640!../../../temp/${mediaId}.jpg`);
 
@@ -69,9 +74,51 @@ export default ({ type, mediaId, no }) => {
 	}
 
 
+	const wrappedViews = showViews && views
+		? 	<div
+				className={ classnames(styles.viewCount) }
+				data-mediaid={ mediaId }
+			>
+				<span
+					className={ classnames('js-yt-views', styles.viewsNumber) }
+					data-mediaid={ mediaId }
+				>
+					{ views }
+				</span><span> Views!</span>
+				<Icon icon="smileyHeart"/>
+			</div>
+		: 	null;
+
+	const description = showDesc && MEDIADATA[type][mediaId].desc ? MEDIADATA[type][mediaId].desc : null;
+	const wrappedDescription = showDesc
+		? 	 <div className={ styles.description } ><p dangerouslySetInnerHTML={{ __html: description }} /></div>
+		: 	null;
+
+
+	const wrappedTitle = showTitle
+		? 	<h3>{ MEDIADATA[type][mediaId].title }</h3>
+		:	null;
+
+	// const wrappedTitle = showTitle
+	// 	?	mediaURL
+	// 			? <a href={ mediaURL } rel="noopener"><h3>{ MEDIADATA[type][mediaId].title }</h3></a>
+	// 			: <h3>{ MEDIADATA[type][mediaId].title }</h3>
+	// 	:	null;
+
+	const text = wrappedTitle
+		? 	<div className={ styles.description }>
+				{ wrappedTitle }
+				{ wrappedDescription }
+				{/* wrappedViews */}
+			</div>
+		: null;
+
 	return (
-		<div className={ styles.media }>
-			{ mainMedia }
-		</div>
+		<ContentBox no={no} >
+			<div className={ styles.media }>
+					{ mainMedia }
+			</div>
+			{ text }
+		</ContentBox>
 	)
 }
