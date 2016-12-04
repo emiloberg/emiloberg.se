@@ -81,7 +81,7 @@ export default () => (
 			</Box>
 		</MainSection>
 		<MainSection bg="blue">
-			<Headline type="section" icon="gift" withText>Client Work</Headline>
+			<Headline type="section" icon="gift">Client Work</Headline>
 			<Text standalone>Phosfluorescently scale optimal e-business rather than standards compliant niches. Compellingly deploy state of the art convergence rather than alternative paradigms. Intrinsicly negotiate cross-media growth strategies via team building paradigms.</Text>
 			<TwoUp>
 				<Box type="twoUp" no="first">

@@ -6,31 +6,51 @@
 
 .h1 {
     color: rgba(255, 255, 255, .92);
-    font-size: 10rem;
+    font-size: 5rem;
     font-weight: 800;
-    padding: 2.7rem 0 10rem 0;
+    padding: 2.7rem 1rem 10rem 1rem;
+    text-align: center;
+    line-height: 1;
+}
+
+.h2 {
+    color: #fff;
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    padding: 2.7rem 1rem;
+    text-align: center;
+}
+
+.h3 {
+    color: #fff;
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 1.2;
+    padding: 2.7rem 1rem;
+    text-align: center;
+}
+
+@media only screen and (min-width: 56.25em) {
+    .h1 {
+        font-size: 7rem;
+    }
+}
+
+@media only screen and (min-width: 65.625em) {
+    .h2 {
+        font-size: 4.8rem;
+    }
+
+    .h3 {
+        font-size: 3rem;
+    }
 }
 
 .withText {
     padding-bottom: 0;
 }
 
-.h2 {
-    color: #fff;
-    font-size: 4.8rem;
-    font-weight: 600;
-    line-height: 1.2;
-    padding: 2.7rem 0;
-    /*max-width: 550px;*/
-}
-
-.h3 {
-    color: #fff;
-    font-size: 3rem;
-    font-weight: 600;
-    line-height: 1.2;
-    padding: 2.7rem 0;
-}
 
 .wrapper {
     position: relative;
@@ -39,16 +59,36 @@
 
 .icon {
     position: absolute;
-    right: -13rem;
-    top: 4.7rem;
+    right: calc(50% - 5rem);
+    bottom: 1rem;
     width: 10rem;
     height: 10rem;
 }
 
 .iconSmall {
-    position: absolute;
-    right: -7rem;
-    top: 3rem;
-    width: 5rem;
-    height: 5rem;
+    display: none;
+}
+
+@media only screen and (min-width: 56.25em) {
+    .icon {
+        bottom: 2rem;
+    }
+}
+
+@media only screen and (min-width: 65.625em) {
+    .iconSmall {
+        right: -7rem;
+        top: 3rem;
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .icon {
+        display: block;
+        position: absolute;
+        right: -8rem;
+        bottom: 9rem;
+        width: 10rem;
+        height: 10rem;
+    }
 }

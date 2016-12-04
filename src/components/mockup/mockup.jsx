@@ -26,18 +26,6 @@ export default ({ mockup }) => {
 
 	return (
 		<div className={ styles.mockupWrapper }>
-			{/*<img*/}
-				{/*className={ classnames(styles.jsSource, styles.mockup, 'lazy') }*/}
-				{/*src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="*/}
-				{/*data-src={ mockupImage.src + '|' +  mockupImage.images[1].path }*/}
-			{/*/>*/}
-			{/*<img*/}
-				{/*className={ classnames(styles.jsSource, styles.screenshot, 'lazy') }*/}
-				{/*src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="*/}
-				{/*style= { sizeOut }*/}
-				{/*data-src={ screenshotImage.src + '|' +  screenshotImage.images[1].path }*/}
-			{/*/>*/}
-
 			<div
 				className={ classnames(styles.jsSource, styles.mockup, 'lazy') }
 				data-src={ mockupImage.src + '|' +  mockupImage.images[1].path }
