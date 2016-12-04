@@ -7,8 +7,6 @@ import TwoUp from './components/twoUp/twoUp';
 import Text from './components/text/text';
 import SvgDropShadow from './components/svgDropShadow/svgDropShadow';
 import Mockup from './components/mockup/mockup';
-import LogoName from './components/logoName/logoName';
-import YtVideo from 'components/ytVideo/ytVideo';
 
 import globalStyle from './index.css';
 
@@ -100,98 +98,5 @@ export default () => (
 				</Text>
 			</Box>
 		</MainSection>
-		{/*<Section*/}
-			{/*bg="LightBlue"*/}
-			{/*padding="Large"*/}
-		{/*>*/}
-			{/*Hej*/}
-		{/*</Section>*/}
-		{/*<Section*/}
-			{/*bg="LightBlue"*/}
-			{/*padding="Medium"*/}
-		{/*>*/}
-			{/*<Media*/}
-				{/*no="3"*/}
-				{/*mediaId="eWmkBNBTbMM"*/}
-				{/*type="yt"*/}
-				{/*showViews*/}
-			{/*/>*/}
-			{/*<Media*/}
-				{/*no="3"*/}
-				{/*mediaId="R98cdsq1qxA"*/}
-				{/*type="yt"*/}
-				{/*showViews*/}
-			{/*/>*/}
-
-			{/*<Media*/}
-				{/*no="3"*/}
-				{/*mediaId="f9x7wL16KIk"*/}
-				{/*type="yt"*/}
-			{/*/>*/}
-		{/*</Section>*/}
-
-		{/*<Section*/}
-			{/*bg="LightBlue"*/}
-			{/*padding="Medium"*/}
-		{/*>*/}
-			{/*<Media*/}
-				{/*no="2"*/}
-				{/*mediaId="xLi3nBB6XeuOCK"*/}
-				{/*type="slideshare"*/}
-			{/*/>*/}
-		{/*</Section>*/}
-
-		{/*<Section*/}
-			{/*bg="LightBlue"*/}
-			{/*padding="Medium"*/}
-		{/*>*/}
-			{/*<Media*/}
-				{/*no="2"*/}
-				{/*mediaId="C_ZtQClrVYw"*/}
-				{/*type="yt"*/}
-			{/*/>*/}
-			{/*<Media*/}
-				{/*no="2"*/}
-				{/*mediaId="eWmkBNBTbMM"*/}
-				{/*type="yt"*/}
-			{/*/>*/}
-		{/*</Section>*/}
-
-
-
-
-		{/*<Section*/}
-			{/*decs="SingleWhiteSlantedBox"*/}
-			{/*bg="HoneyComb"*/}
-			{/*cols="Even"*/}
-			{/*padding="Medium"*/}
-		{/*>*/}
-			{/*<LogoName />*/}
-		{/*</Section>*/}
-
-		{/*<Section*/}
-			{/*decs="SingleVideo"*/}
-			{/*bg="Blue"*/}
-			{/*cols="Even"*/}
-			{/*padding="Large"*/}
-		{/*>*/}
-			{/*<YtVideo*/}
-				{/*showViews*/}
-				{/*ytId="R98cdsq1qxA"*/}
-				{/*title="NativeScript vs. PhoneGap, React, Titanium, Ionic, etc"*/}
-			{/*/>*/}
-		{/*</Section>*/}
-		{/*<Section*/}
-			{/*decs="SingleVideo"*/}
-			{/*bg="Blue"*/}
-			{/*cols="Even"*/}
-			{/*padding="Large"*/}
-		{/*>*/}
-			{/*<YtVideo*/}
-				{/*ytId="eWmkBNBTbMM"*/}
-				{/*title="Webpack 2 - A full tutorial"*/}
-			{/*/>*/}
-		{/*</Section>*/}
-
 	</div>
 );

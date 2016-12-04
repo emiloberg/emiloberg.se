@@ -4,7 +4,13 @@
     font-smooth: always;
     -webkit-font-smoothing: antialiased;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.6rem;
+}
+
+@media only screen and (min-width: 40em) {
+    .text {
+        font-size: 2rem;
+    }
 }
 
 .standalone {
