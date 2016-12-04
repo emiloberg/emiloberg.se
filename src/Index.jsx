@@ -5,6 +5,8 @@ import Headline from './components/headline/headline';
 import Box from './components/box/box';
 import TwoUp from './components/twoUp/twoUp';
 import Text from './components/text/text';
+import SvgDropShadow from './components/svgDropShadow/svgDropShadow';
+import Mockup from './components/mockup/mockup';
 import LogoName from './components/logoName/logoName';
 import YtVideo from 'components/ytVideo/ytVideo';
 
@@ -52,6 +54,7 @@ import Media from 'components/media/media'
 
 export default () => (
 	<div>
+		<SvgDropShadow />
 		<MainSection bg="purple">
 			<Headline type="section" icon="tickets">Public Speaking</Headline>
 			<Box>
@@ -61,12 +64,12 @@ export default () => (
 			</Box>
 			<TwoUp>
 				<Box type="twoUp" no="first">
-					<Media mediaId="eWmkBNBTbMM" type="yt" />
+					<Media mediaId="R98cdsq1qxA" type="yt" />
 					<Headline>NativeScript vs. PhoneGap, React, Titanium, Ionic, etc</Headline>
 					<Text>Presented at Liferay North American Symposium, Boston, USA and at Liferay DevCon Darmstadt, Germany</Text>
 				</Box>
 				<Box type="twoUp" no="last">
-					<Media mediaId="eWmkBNBTbMM" type="yt" />
+					<Media mediaId="f9x7wL16KIk" type="yt" />
 					<Headline>NativeScript vs. PhoneGap, React, Titanium, Ionic, etc</Headline>
 					<Text>Presented as Uppsala JS</Text>
 				</Box>
@@ -78,7 +81,24 @@ export default () => (
 			</Box>
 		</MainSection>
 		<MainSection bg="blue">
-			<Headline type="section" icon="gift">Client Work</Headline>
+			<Headline type="section" icon="gift" withText>Client Work</Headline>
+			<Text standalone>Phosfluorescently scale optimal e-business rather than standards compliant niches. Compellingly deploy state of the art convergence rather than alternative paradigms. Intrinsicly negotiate cross-media growth strategies via team building paradigms.</Text>
+			<TwoUp>
+				<Box type="twoUp" no="first">
+					<Media type="mockup" mockup="ipad-landscape" />
+				</Box>
+				<Box type="twoUp" no="last">
+					<Text>Presented at Liferay North American Symposium, Boston, USA and at Liferay DevCon Darmstadt, Germany</Text>
+				</Box>
+			</TwoUp>
+			<Box>
+				<Mockup mockup="hubotJira" />
+				<Headline type="single" icon="logoSlack">Hubot Jira for Slack</Headline>
+				<Text>Phosfluorescently scale optimal e-business rather than standards compliant niches. Compellingly deploy state of the art convergence rather than alternative paradigms. Intrinsicly negotiate cross-media growth strategies via team building paradigms. Perfect for answering the question "What happend yesterday?"
+
+					hubot jira changed - Get yesterdays changed Jira issues
+				</Text>
+			</Box>
 		</MainSection>
 		{/*<Section*/}
 			{/*bg="LightBlue"*/}

@@ -11,6 +11,10 @@
     padding: 2.7rem 0 10rem 0;
 }
 
+.withText {
+    padding-bottom: 0;
+}
+
 .h2 {
     color: #fff;
     font-size: 4.8rem;
@@ -30,6 +34,7 @@
 
 .wrapper {
     position: relative;
+    display: inline-block;
 }
 
 .icon {
@@ -38,4 +43,12 @@
     top: 4.7rem;
     width: 10rem;
     height: 10rem;
+}
+
+.iconSmall {
+    position: absolute;
+    right: -7rem;
+    top: 3rem;
+    width: 5rem;
+    height: 5rem;
 }

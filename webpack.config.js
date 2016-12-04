@@ -87,7 +87,7 @@ module.exports = {
 			loaders: ['json-loader'],
 			exclude: /node_modules/
 		}, {
-			test: /\.jpg?$/,
+			test: /\.(jpg|png)?$/,
 			loaders: ['file-loader'],
 			exclude: /node_modules/
 		},            {

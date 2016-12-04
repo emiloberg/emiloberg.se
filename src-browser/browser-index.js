@@ -10,7 +10,7 @@ import Blazy from 'blazy'
 		video.addEventListener('click', (e) => {
 			e.preventDefault();
 			const iframe = document.createElement('iframe');
-			iframe.setAttribute('src', `//www.youtube.com/embed/${e.target.dataset.mediaid}?autoplay=1&?rel=0&showinfo=0`);
+			iframe.setAttribute('src', `//www.youtube.com/embed/${e.target.dataset.mediaid}?autoplay=1&?rel=0&showinfo=0&iv_load_policy=3`);
 			iframe.setAttribute('frameborder', '0');
 			iframe.setAttribute('allowfullscreen', '1');
 			e.target.parentNode.replaceChild(iframe, e.target);

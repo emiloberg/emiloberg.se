@@ -10,13 +10,13 @@ import styles from './media.css'
 
 const MEDIADATA = require('../../../data/media.json');
 
-export default ({ type, mediaId, no }) => {
+export default ({ type, mediaId }) => {
 	let mediaURL;
 	let mediaType;
 	let mainMedia;
 	if (type === 'yt') {
 		mediaType = 'video';
-		mediaURL = `https://www.youtube.com/watch?v=${mediaId}`;
+		mediaURL = `https://www.youtube.com/watch?v=${mediaId}?rel=0&showinfo=0&iv_load_policy=3`;
 		const placeholderImg = require(`responsive?placeholder=true&sizes[]=320,sizes[]=640!../../../temp/${mediaId}.jpg`);
 
 		mainMedia = (

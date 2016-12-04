@@ -4,33 +4,47 @@ import classnames from 'classnames';
 import styles from './headline.css';
 import Icon from 'components/icon/icon'
 
-export default ({ type, children, icon }) => {
+export default ({ type, children, icon, withText = false }) => {
+	let heading;
 	if(type === 'section') {
-		const heading = (<h1 className={ styles.h1 }>{ children }</h1>);
-		if (icon) {
-			return (
-				<div className={ styles.wrapper }>
-					{ heading }
-					<div className={ styles.icon}>
-						<Icon icon={ icon } />
-					</div>
-				</div>
-			)
-		}
-		return heading;
+		heading = (
+			<h1
+				className={
+					classnames({
+						[styles.h1]: true,
+						[styles.withText]: withText
+					})}
+			>
+				{ children }
+			</h1>
+		);
+
 	} else if(type === 'single') {
-		return (
+		heading = (
 			<h2 className={ styles.h2 }>
 				{ children }
 			</h2>
 		);
+	} else {
+		heading = (
+			<h3 className={ styles.h3 }>
+				{ children }
+			</h3>
+		);
 	}
 
+	if (icon) {
+		const iconStyle = type === 'section' ? styles.icon : styles.iconSmall;
+		return (
+			<div className={ styles.wrapper }>
+				{ heading }
+				<div className={ iconStyle }>
+					<Icon icon={ icon } />
+				</div>
+			</div>
+		)
+	}
 
-	return (
-		<h3 className={ styles.h3 }>
-			{ children }
-		</h3>
-	);
+	return heading;
 
 };

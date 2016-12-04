@@ -9,6 +9,7 @@ const YtFullScren = require('./svg/ytPlaybarFullScreen.svg');
 const SmileyHeart = require('./svg/smiley-heart.svg');
 const Tickets = require('./svg/tickets.svg');
 const Gift = require('./svg/gift.svg');
+const LogoSlack = require('./svg/logoSlack.svg');
 
 import classnames from 'classnames';
 import styles from './icon.css';
@@ -40,5 +41,7 @@ export default ({ icon, center, size, className }) => {
 		return <Tickets className={ classnames(cssClasses, className) }/>;
 	} else if (icon === 'gift') {
 		return <Gift className={ classnames(cssClasses, className) }/>;
+	} else if (icon === 'logoSlack') {
+		return <LogoSlack className={ classnames(cssClasses, className) }/>;
 	}
 };

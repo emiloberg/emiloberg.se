@@ -13,8 +13,12 @@ http://lanyrd.com/2013/intrateam-event-stockholm/
 http://lanyrd.com/2013/intranatverk/
 
 
+Popup utan JS: https://codepen.io/peiche/pen/vhqym
 
 Todo:
 
 * fixa in breakpoints för previews i javascript enabled-läget
 * hämta antal views från youtube direkt
+
+
+

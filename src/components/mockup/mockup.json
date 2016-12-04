@@ -1,0 +1,12 @@
+{
+    "hubotJira": {
+        "screenshot": "HubotSlack",
+        "mockup": "iPad",
+        "size": {
+            "left": 9.803921568,
+            "top": 5.250875145,
+            "bottom": 9.803921568,
+            "right": 9.803921568
+        }
+    }
+}
