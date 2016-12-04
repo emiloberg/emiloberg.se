@@ -6,8 +6,8 @@ import styles from './mockup.css';
 import MOCKUPDATA from './mockup.json';
 
 const images = {
-	HubotSlack: require('responsive?placeholder=true&sizes[]=650,sizes[]=1300!./images/screenshots/hubot-slack.png'),
-	iPad: require('responsive?placeholder=true&sizes[]=650,sizes[]=1300!./images/mockups/ipad.png')
+	HubotSlack: require('responsive?placeholder=true&sizes[]=1024,sizes[]=2048!./images/screenshots/hubot-slack.png'),
+	iPad: require('responsive?placeholder=true&sizes[]=1024,sizes[]=2048!./images/mockups/ipad.png')
 };
 
 export default ({ mockup }) => {
@@ -26,23 +26,51 @@ export default ({ mockup }) => {
 
 	return (
 		<div className={ styles.mockupWrapper }>
-			<img
+			{/*<img*/}
+				{/*className={ classnames(styles.jsSource, styles.mockup, 'lazy') }*/}
+				{/*src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="*/}
+				{/*data-src={ mockupImage.src + '|' +  mockupImage.images[1].path }*/}
+			{/*/>*/}
+			{/*<img*/}
+				{/*className={ classnames(styles.jsSource, styles.screenshot, 'lazy') }*/}
+				{/*src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="*/}
+				{/*style= { sizeOut }*/}
+				{/*data-src={ screenshotImage.src + '|' +  screenshotImage.images[1].path }*/}
+			{/*/>*/}
+
+			<div
 				className={ classnames(styles.jsSource, styles.mockup, 'lazy') }
-				src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
 				data-src={ mockupImage.src + '|' +  mockupImage.images[1].path }
+				style={{
+					paddingBottom: mockupdata.mockupRatio + '%'
+				}}
 			/>
-			<img
+			<div
 				className={ classnames(styles.jsSource, styles.screenshot, 'lazy') }
-				src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-				style= { sizeOut }
 				data-src={ screenshotImage.src + '|' +  screenshotImage.images[1].path }
+				style={{
+					paddingBottom: mockupdata.screenshotRatio + '%',
+					...sizeOut
+				}}
 			/>
 			<div className={ classnames(styles.mockup, styles.fallback) }>
-				<img src={ mockupImage.src + '?fallbackMockup' } />
+				<div
+					className={ styles.fallbackMockup }
+					style={{
+						backgroundImage: `url('${mockupImage.src}?fallback')`,
+						paddingBottom: mockupdata.mockupRatio + '%'
+					}}
+				/>
+				<div
+					className={ styles.fallbackScreenshot }
+					style={{
+						backgroundImage: `url('${screenshotImage.src}?fallback')`,
+						paddingBottom: mockupdata.screenshotRatio + '%',
+						...sizeOut
+					}}
+				/>
 			</div>
-			<div className={ classnames(styles.screenshot, styles.fallback) } style= { sizeOut }>
-				<img src={ screenshotImage.src + '?fallbackMockup' }/>
-			</div>
+
 		</div>
 	);
 };

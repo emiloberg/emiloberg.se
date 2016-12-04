@@ -26,6 +26,18 @@
     display: none;
 }
 
-.fallback img {
-    width: 100%;
+.fallbackMockup {
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.fallbackScreenshot {
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.jsSource {
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
