@@ -5,10 +5,22 @@
         "size": {
             "left": 9.803921568,
             "top": 5.250875145,
-            "bottom": 9.803921568,
+            "bottom": 5.250875145,
             "right": 9.803921568
         },
         "mockupRatio": 67.1875,
         "screenshotRatio": 75
+    },
+    "rekListan": {
+        "screenshot": "RekListan",
+        "mockup": "iPhone",
+        "size": {
+            "left": 5.64516129,
+            "top": 12.060546875,
+            "bottom": 12.060546875,
+            "right": 5.64516129
+        },
+        "mockupRatio": 206.451612903,
+        "screenshotRatio": 177.551020408
     }
 }

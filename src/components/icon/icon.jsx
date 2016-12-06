@@ -10,6 +10,7 @@ const SmileyHeart = require('./svg/smiley-heart.svg');
 const Tickets = require('./svg/tickets.svg');
 const Gift = require('./svg/gift.svg');
 const LogoSlack = require('./svg/logoSlack.svg');
+const GitHub = require('./svg/github.svg');
 
 import classnames from 'classnames';
 import styles from './icon.css';
@@ -43,5 +44,7 @@ export default ({ icon, center, size, className }) => {
 		return <Gift className={ classnames(cssClasses, className) }/>;
 	} else if (icon === 'logoSlack') {
 		return <LogoSlack className={ classnames(cssClasses, className) }/>;
+	} else if (icon === 'github') {
+		return <GitHub className={ classnames(cssClasses, className) }/>;
 	}
 };

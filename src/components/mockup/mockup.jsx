@@ -7,7 +7,9 @@ import MOCKUPDATA from './mockup.json';
 
 const images = {
 	HubotSlack: require('responsive?placeholder=true&sizes[]=1024,sizes[]=2048!./images/screenshots/hubot-slack.png'),
-	iPad: require('responsive?placeholder=true&sizes[]=1024,sizes[]=2048!./images/mockups/ipad.png')
+	RekListan: require('responsive?placeholder=true&sizes[]=1024,sizes[]=1025!./images/screenshots/reklistan.png'),
+	iPad: require('responsive?placeholder=true&sizes[]=1024,sizes[]=2048!./images/mockups/ipad.png'),
+	iPhone: require('responsive?placeholder=true&sizes[]=1024,sizes[]=2048!./images/mockups/iphone.png')
 };
 
 export default ({ mockup }) => {
@@ -24,18 +26,28 @@ export default ({ mockup }) => {
 		width: (100 - mockupSize.left - mockupSize.right) + '%'
 	};
 
+	console.log('mockupImage', mockupImage);
+
+	const mockupLazyImage = mockupImage.images.length > 1
+		? mockupImage.src + '|' +  mockupImage.images[1].path
+		: mockupImage.src;
+
+	const screenshotLazyImage = screenshotImage.images.length > 1
+		? screenshotImage.src + '|' +  screenshotImage.images[1].path
+		: screenshotImage.src;
+
 	return (
 		<div className={ styles.mockupWrapper }>
 			<div
 				className={ classnames(styles.jsSource, styles.mockup, 'lazy') }
-				data-src={ mockupImage.src + '|' +  mockupImage.images[1].path }
+				data-src={ mockupLazyImage }
 				style={{
 					paddingBottom: mockupdata.mockupRatio + '%'
 				}}
 			/>
 			<div
 				className={ classnames(styles.jsSource, styles.screenshot, 'lazy') }
-				data-src={ screenshotImage.src + '|' +  screenshotImage.images[1].path }
+				data-src={ screenshotLazyImage }
 				style={{
 					paddingBottom: mockupdata.screenshotRatio + '%',
 					...sizeOut

@@ -1,0 +1,48 @@
+.button,
+.button:visited {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 2rem 4rem;
+    border-radius: 2em;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 180ms, border-color 180ms, transform 180ms;
+    align-self: flex-start;
+    font-family: OpenSans, "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+}
+
+.button:hover {
+    background-color: #2c3a7b;
+    border-color: #2c3a7b;
+    transform: scale(1.1);
+}
+
+.button:focus,
+.button:active {
+    outline: none;
+    border-color: #FFA500;
+    transform: scale(1.1);
+}
+
+.iconGitHub {
+    height: 1.6rem;
+    margin-left: .6rem;
+}
+
+@media only screen and (min-width: 65.625em) {
+    .side {
+        position: absolute;
+        bottom: 0;
+        left: 22.5rem;
+        margin-top: 0;
+    }
+}
+
+.side {
+    width: 100%;
+    max-width: 65rem;
+    margin-top: 2rem;
+}

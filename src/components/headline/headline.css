@@ -1,7 +1,5 @@
 .h1, .h2, .h3 {
     font-family: Adelle, Arial;
-    font-smooth: always;
-    -webkit-font-smoothing: antialiased;
 }
 
 .h1 {
@@ -27,6 +25,10 @@
     font-weight: 600;
     line-height: 1.2;
     padding: 2.7rem 0;
+}
+
+.h3.side {
+    padding-top: 0;
 }
 
 @media only screen and (min-width: 56.25em) {

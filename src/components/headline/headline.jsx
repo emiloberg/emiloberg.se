@@ -27,7 +27,7 @@ export default ({ type, children, icon, withText = false }) => {
 		);
 	} else {
 		heading = (
-			<h3 className={ styles.h3 }>
+			<h3 className={ classnames(styles.h3, styles[type]) }>
 				{ children }
 			</h3>
 		);

@@ -7,6 +7,8 @@ import TwoUp from './components/twoUp/twoUp';
 import Text from './components/text/text';
 import SvgDropShadow from './components/svgDropShadow/svgDropShadow';
 import Mockup from './components/mockup/mockup';
+import Button from './components/button/button';
+import Terminal from './components/terminal/terminal';
 
 import globalStyle from './index.css';
 
@@ -82,12 +84,14 @@ export default () => (
 			<Headline type="section" icon="gift">Client Work</Headline>
 			<Text standalone>Phosfluorescently scale optimal e-business rather than standards compliant niches. Compellingly deploy state of the art convergence rather than alternative paradigms. Intrinsicly negotiate cross-media growth strategies via team building paradigms.</Text>
 			<TwoUp>
-				<Box type="twoUp" no="first">
-					<Media type="mockup" mockup="ipad-landscape" />
+				<Box type="twoUpUneven" no="first">
+					<Mockup mockup="rekListan" />
 				</Box>
-				<Box type="twoUp" no="last">
+				<Box type="twoUpUneven" no="last">
+					<Headline type="side">REK-listan</Headline>
 					<Text>Presented at Liferay North American Symposium, Boston, USA and at Liferay DevCon Darmstadt, Germany</Text>
 				</Box>
+				<Button side type="github" url="https://github.com/emiloberg/oppna-program-reklistan-app/" />
 			</TwoUp>
 			<Box>
 				<Mockup mockup="hubotJira" />
@@ -97,6 +101,27 @@ export default () => (
 					hubot jira changed - Get yesterdays changed Jira issues
 				</Text>
 			</Box>
+			<Box>
+				<Terminal code={ code } title="emiloberg@emils-mbp:~/"/>
+				<Headline type="single" icon="logoSlack">Liferay DDM Tool</Headline>
+				<Text>Command Line Tool for authoring, uploading, downloading and synchronizing Liferay DDM related stuff (Structures and Templates) across environments. All transactions are done over JSON Web Services.</Text>
+			</Box>
 		</MainSection>
 	</div>
 );
+
+
+const code = `<span class="g">ddm</span>
+[<span class="y">?</span>] Which project do you want to work with? <span class="b">acme</span>
+[<span class="y">?</span>] Which host do you want to work with? <span class="b">local</span>
+Getting data from server
+Connected
+
+[<span class="y">?</span>] What do you want to do? <span class="b">watch</span>
+Press Ctrl+C to return to menu
+Listening for changes...
+
+[15:26:13] <span class="y">Changed</span> src/main/webapp/css/partials/atoms/_body.scss
+[15:26:14] <span class="g">Okay</span> src/main/webapp/css/partials/atoms/_body.scss
+[15:26:13] <span class="y">Changed</span> src/main/webapp/templates/main-nav.ftl
+[15:26:14] <span class="g">Okay</span> src/main/webapp/templates/main-nav.ftl`;
