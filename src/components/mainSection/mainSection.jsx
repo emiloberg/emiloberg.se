@@ -3,9 +3,18 @@ import React from 'react';
 import classnames from 'classnames';
 import styles from './mainSection.css';
 
-export default ({ bg, padding = 'medium', children }) => {
+export default ({ bg, padding = 'medium', children, id, relative }) => {
 	return (
-		<div className={ classnames(styles['bg' + bg], styles['padding' + padding]) }>
+		<div
+			id={ id }
+			className={
+				classnames({
+					[styles['bg' + bg]]: true,
+					[styles['padding' + padding]]: true,
+					[styles.relative]: relative
+			})}
+
+			>
 			<div className={ styles.section }>
 				{ children }
 			</div>

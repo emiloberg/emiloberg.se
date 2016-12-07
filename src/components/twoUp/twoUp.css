@@ -9,6 +9,14 @@
     margin-bottom: 10rem;
 }
 
+.small {
+    margin-bottom: 5rem;
+}
+
+.noMargin {
+    margin: 0;
+}
+
 @media only screen and (min-width: 65.625em) {
     .twoUp {
         align-items: flex-start;

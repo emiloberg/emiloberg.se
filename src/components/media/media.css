@@ -19,6 +19,7 @@
     height: 0;
 }
 
+.image,
 .video {
     padding-bottom: 56.25%;
     background-color: #252621;
@@ -72,19 +73,19 @@
     background-color: rgba(31,31,31,0.51);
 }
 
-.ssPlaceholder,
+.genericPlaceholder,
 .videoPlaceholder {
     opacity: 0;
     transition: opacity 500ms;
 }
 
-:global(.loaded).ssPlaceholder,
+:global(.loaded).genericPlaceholder,
 :global(.loaded).videoPlaceholder {
     opacity: 1;
 }
 
 :global(.js) .fallback,
-:global(.no-js) .ssPlaceholder,
+:global(.no-js) .genericPlaceholder,
 :global(.no-js) .videoPlaceholder {
     display: none;
 }

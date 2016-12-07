@@ -11,6 +11,8 @@ const Tickets = require('./svg/tickets.svg');
 const Gift = require('./svg/gift.svg');
 const LogoSlack = require('./svg/logoSlack.svg');
 const GitHub = require('./svg/github.svg');
+const Bulb = require('./svg/bulb.svg');
+const Robot = require('./svg/robot.svg');
 
 import classnames from 'classnames';
 import styles from './icon.css';
@@ -46,5 +48,9 @@ export default ({ icon, center, size, className }) => {
 		return <LogoSlack className={ classnames(cssClasses, className) }/>;
 	} else if (icon === 'github') {
 		return <GitHub className={ classnames(cssClasses, className) }/>;
+	} else if (icon === 'bulb') {
+		return <Bulb className={ classnames(cssClasses, className) }/>;
+	} else if (icon === 'robot') {
+		return <Robot className={ classnames(cssClasses, className) }/>;
 	}
 };

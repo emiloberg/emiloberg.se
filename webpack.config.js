@@ -87,14 +87,19 @@ module.exports = {
 			loaders: ['json-loader'],
 			exclude: /node_modules/
 		}, {
-			test: /\.(jpg|png)?$/,
+			test: /\.(jpg|png)$/,
 			loaders: ['file-loader'],
 			exclude: /node_modules/
-		},            {
+		}, {
 			test: /\.(eot|ttf|woff|woff2)$/,
 			loader: 'file?name=[name].[ext]'
 		},
 			{ test: /\.svg$/, loader: 'babel?presets[]=es2015,presets[]=react!svg-react' }
+		, {
+			test: /\.txt$/,
+			loaders: ['raw-loader'],
+			exclude: /node_modules/
+			},
 		]
 	}
 

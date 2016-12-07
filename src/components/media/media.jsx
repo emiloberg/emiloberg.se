@@ -50,21 +50,40 @@ export default ({ type, mediaId }) => {
 			<a href={ mediaURL } rel="noopener" className="js-disabled"
 			   aria-label={`Slideshare presentation: ${MEDIADATA[type][mediaId].title}`}
 			>
+				<div className={ classnames(styles[mediaType], styles.responsiveInner) }>
+					<div
+						className={ classnames(styles.placeholder, 'lazy', styles.genericPlaceholder) }
+						data-src={ placeholderImg.src + '|' +  placeholderImg.images[1].path }
+					>
+						<SsPlaybar mediaId={ mediaId } />
+					</div>
+					<div className={ styles.fallback }>
+						<div
+							className={ styles.placeholder }
+							style={{ backgroundImage: `url('${placeholderImg.src}?fallback')` }}
+						/>
+					</div>
+				</div>
+			</a>
+		);
+	} else if (type === 'image') {
+		mediaType = 'image';
+		const image = require(`responsive?placeholder=true&sizes[]=510,sizes[]=1020!./images/${mediaId}`);
+
+		mainMedia = (
 			<div className={ classnames(styles[mediaType], styles.responsiveInner) }>
 				<div
-					className={ classnames(styles.placeholder, 'lazy', styles.ssPlaceholder) }
-					data-src={ placeholderImg.src + '|' +  placeholderImg.images[1].path }
+					className={ classnames(styles.placeholder, 'lazy', styles.genericPlaceholder) }
+					data-src={ image.src + '|' +  image.images[1].path }
 				>
-					<SsPlaybar mediaId={ mediaId } />
 				</div>
 				<div className={ styles.fallback }>
 					<div
 						className={ styles.placeholder }
-						style={{ backgroundImage: `url('${placeholderImg.src}?fallback')` }}
+						style={{ backgroundImage: `url('${image.src}?fallback')` }}
 					/>
 				</div>
 			</div>
-			</a>
 		);
 	}
 

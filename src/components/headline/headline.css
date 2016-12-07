@@ -39,18 +39,16 @@
 
 @media only screen and (min-width: 65.625em) {
     /*.h2 {*/
-        /*font-size: 3.5rem;*/
+    /*font-size: 3.5rem;*/
     /*}*/
-
     /*.h3 {*/
-        /*font-size: 3rem;*/
+    /*font-size: 3rem;*/
     /*}*/
 }
 
 .withText {
     padding-bottom: 0;
 }
-
 
 .wrapper {
     position: relative;
@@ -60,7 +58,7 @@
 .icon {
     position: absolute;
     right: calc(50% - 5rem);
-    bottom: 1rem;
+    bottom: 2rem;
     width: 10rem;
     height: 10rem;
 }
@@ -87,7 +85,7 @@
         display: block;
         position: absolute;
         right: -8rem;
-        bottom: 9rem;
+        bottom: calc(50% - 1rem);
         width: 10rem;
         height: 10rem;
     }

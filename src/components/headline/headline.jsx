@@ -4,20 +4,32 @@ import classnames from 'classnames';
 import styles from './headline.css';
 import Icon from 'components/icon/icon'
 
-export default ({ type, children, icon, withText = false }) => {
+export default ({ type, children, icon, withText = false, html }) => {
 	let heading;
 	if(type === 'section') {
-		heading = (
-			<h1
-				className={
+		if (html) {
+			heading = (
+				<h1
+					dangerouslySetInnerHTML={{__html: html}}
+					className={
+						classnames({
+							[styles.h1]: true,
+							[styles.withText]: withText,
+						})}
+				/>
+			);
+		} else {
+			heading = (
+				<h1 className={
 					classnames({
 						[styles.h1]: true,
 						[styles.withText]: withText
 					})}
-			>
-				{ children }
-			</h1>
-		);
+				>
+					{ children }
+				</h1>
+			);
+		}
 
 	} else if(type === 'single') {
 		heading = (

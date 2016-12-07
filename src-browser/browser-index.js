@@ -1,5 +1,10 @@
 import Blazy from 'blazy'
 
+import VOID from './vendor/particles.min';
+
+import particlesConfig from './particles.conf.json';
+
+
 (function(){
 
 	/**
@@ -71,8 +76,13 @@ import Blazy from 'blazy'
 	// 		}, 200);
 	// 	}
 	// });
+}());
 
+(function(){
+	particlesJS('particles', particlesConfig);
+}());
 
+(function(){
 	/**
 	 * Ask YouTube for the latest view count and update ui if found
  	 */

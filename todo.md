@@ -19,6 +19,4 @@ Todo:
 
 * fixa in breakpoints för previews i javascript enabled-läget
 * fixa modals på bilder
-
-
-
+* minska filstorleken på bilderna som bara är vanliga bilder

@@ -5,19 +5,43 @@
     color: #fff;
     text-decoration: none;
     border: 2px solid white;
-    padding: 2rem 4rem;
-    border-radius: 2em;
+    padding: 3rem 4rem;
+    border-radius: 3em;
     display: inline-flex;
     align-items: center;
     transition: background-color 180ms, border-color 180ms, transform 180ms;
     align-self: flex-start;
     font-family: OpenSans, "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+    margin-top: 2.7rem;
+}
+
+.small,
+.small:visited {
+    padding: 1.5rem 2rem;
+}
+
+.button svg {
+    fill: rgba(255, 255, 255, 1);
 }
 
 .button:hover {
     background-color: #2c3a7b;
     border-color: #2c3a7b;
     transform: scale(1.1);
+}
+
+.colorblack svg {
+    transition: fill 180ms;
+}
+
+.colorblack:hover {
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+    color: #3D3C40;
+}
+
+.colorblack:hover svg {
+    fill: rgba(0, 0, 0, 1);
 }
 
 .button:focus,

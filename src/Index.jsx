@@ -9,6 +9,7 @@ import SvgDropShadow from './components/svgDropShadow/svgDropShadow';
 import Mockup from './components/mockup/mockup';
 import Button from './components/button/button';
 import Terminal from './components/terminal/terminal';
+import Particles from './components/particles/particles';
 
 import globalStyle from './index.css';
 
@@ -91,7 +92,7 @@ export default () => (
 					<Headline type="side">REK-listan</Headline>
 					<Text>Presented at Liferay North American Symposium, Boston, USA and at Liferay DevCon Darmstadt, Germany</Text>
 				</Box>
-				<Button side type="github" url="https://github.com/emiloberg/oppna-program-reklistan-app/" />
+				<Button color="blue" side type="github" url="https://github.com/emiloberg/oppna-program-reklistan-app/" />
 			</TwoUp>
 			<Box>
 				<Mockup mockup="hubotJira" />
@@ -102,26 +103,55 @@ export default () => (
 				</Text>
 			</Box>
 			<Box>
-				<Terminal code={ code } title="emiloberg@emils-mbp:~/"/>
+				<Terminal codeId="ddm-tool" title="emiloberg@emils-mbp:~/"/>
 				<Headline type="single" icon="logoSlack">Liferay DDM Tool</Headline>
 				<Text>Command Line Tool for authoring, uploading, downloading and synchronizing Liferay DDM related stuff (Structures and Templates) across environments. All transactions are done over JSON Web Services.</Text>
+				<Button color="blue" type="github" url="https://github.com/emiloberg/oppna-program-reklistan-app/" />
 			</Box>
+		</MainSection>
+		<MainSection bg="black" relative>
+			<Particles />
+			<Headline icon="robot" type="section" html="Internet of<br />Things Things"></Headline>
+			<TwoUp noMargin>
+				<Box type="twoUp" no="first">
+					<Media mediaId="headphones.png" type="image" />
+					<Headline>Node-RED Mopidy</Headline>
+					<Text>This module enables you to control your Mopidy servers from Node-RED. This means that you - from Node-RED - can play all kinds of music, be it files on disk or streamed from Spotify, SoundCloud, Google Play Music or others.</Text>
+				</Box>
+				<Box type="twoUp" no="last">
+					<Media mediaId="lights.png" type="image" />
+					<Headline>Node-RED Tellstick</Headline>
+					<Text>Remote control everything.</Text>
+				</Box>
+			</TwoUp>
+
+			<TwoUp>
+				<Box type="twoUp" no="first">
+					<Button small color="black" type="github" url="https://github.com/emiloberg/oppna-program-reklistan-app/" />
+				</Box>
+				<Box type="twoUp" no="last">
+					<Button small color="black" type="github" url="https://github.com/emiloberg/oppna-program-reklistan-app/" />
+				</Box>
+			</TwoUp>
+
+			<TwoUp small>
+				<Box type="twoUp" no="first">
+					<Headline type="side">Node-RED Advanced Ping</Headline>
+				</Box>
+				<Box type="twoUp" no="last">
+					<Text>This module enables you to control your Mopidy servers from Node-RED. This means that you - from Node-RED - can play all kinds of music, be it files on disk or streamed from Spotify, SoundCloud, Google Play Music or others.</Text>
+					<Button small color="black" type="github" url="https://github.com/emiloberg/oppna-program-reklistan-app/" />
+				</Box>
+			</TwoUp>
+			<TwoUp small>
+				<Box type="twoUp" no="first">
+					<Headline type="side">Node-RED File Function</Headline>
+				</Box>
+				<Box type="twoUp" no="last">
+					<Text>This module enables you to control your Mopidy servers from Node-RED. This means that you - from Node-RED - can play all kinds of music, be it files on disk or streamed from Spotify, SoundCloud, Google Play Music or others.</Text>
+					<Button small color="black" type="github" url="https://github.com/emiloberg/oppna-program-reklistan-app/" />
+				</Box>
+			</TwoUp>
 		</MainSection>
 	</div>
 );
-
-
-const code = `<span class="g">ddm</span>
-[<span class="y">?</span>] Which project do you want to work with? <span class="b">acme</span>
-[<span class="y">?</span>] Which host do you want to work with? <span class="b">local</span>
-Getting data from server
-Connected
-
-[<span class="y">?</span>] What do you want to do? <span class="b">watch</span>
-Press Ctrl+C to return to menu
-Listening for changes...
-
-[15:26:13] <span class="y">Changed</span> src/main/webapp/css/partials/atoms/_body.scss
-[15:26:14] <span class="g">Okay</span> src/main/webapp/css/partials/atoms/_body.scss
-[15:26:13] <span class="y">Changed</span> src/main/webapp/templates/main-nav.ftl
-[15:26:14] <span class="g">Okay</span> src/main/webapp/templates/main-nav.ftl`;

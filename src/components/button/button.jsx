@@ -6,11 +6,19 @@ import styles from './button.css';
 import Icon from '../icon/icon';
 
 
-export default ({ type, url, side }) => {
+export default ({ type, url, side, color, small }) => {
 	let button;
 	if (type === 'github') {
 		button = (
-			<a className={ styles.button } href={ url } rel="noopener">
+			<a
+				className={ classnames({
+					[styles.button]: true,
+					[styles['color' + color]]: true,
+					[styles.small]: small,
+				})}
+				href={ url }
+				rel="noopener"
+			>
 				<span>Fork me on</span>
 				<Icon className={ styles.iconGitHub } icon="github" />
 			</a>

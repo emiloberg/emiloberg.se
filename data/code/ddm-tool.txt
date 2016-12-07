@@ -1,0 +1,14 @@
+<span class="g">ddm</span>
+[<span class="y">?</span>] Which project do you want to work with? <span class="b">acme</span>
+[<span class="y">?</span>] Which host do you want to work with? <span class="b">local</span>
+Getting data from server
+Connected
+
+[<span class="y">?</span>] What do you want to do? <span class="b">watch</span>
+Press Ctrl+C to return to menu
+Listening for changes...
+
+[15:26:13] <span class="y">Changed</span> src/main/webapp/css/partials/atoms/_body.scss
+[15:26:14] <span class="g">Okay</span> src/main/webapp/css/partials/atoms/_body.scss
+[15:26:13] <span class="y">Changed</span> src/main/webapp/templates/main-nav.ftl
+[15:26:14] <span class="g">Okay</span> src/main/webapp/templates/main-nav.ftl
