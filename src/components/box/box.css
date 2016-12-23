@@ -25,6 +25,10 @@
     width: 100%;
     padding: 0;
     /*margin: 0 5%;*/
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /*TODO kolla om man kan ta bort height ^^*/
 }
 
 @media only screen and (min-width: 65.625em) {
@@ -52,6 +56,20 @@
     /*margin: 0 5%;*/
 }
 
+.last {
+    padding-right: 0;
+}
+
+.first {
+    padding-left: 0;
+    margin-bottom: 10rem;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
 @media only screen and (min-width: 65.625em) {
     .twoUpUneven.first {
         width: 20rem;
@@ -64,13 +82,19 @@
         padding: 0 0 0 1.25rem;
         margin: 0;
     }
+
+    .first {
+        margin-bottom: 0;
+    }
 }
 
-
-.last {
-    padding-right: 0;
+.twoUpInner {
+    max-width: 65rem;
+    width: 100%;
 }
 
-.first {
-    padding-left: 0;
+@media only screen and (min-width: 65.625em) {
+    .twoUpInner {
+        max-width: inherit;
+    }
 }

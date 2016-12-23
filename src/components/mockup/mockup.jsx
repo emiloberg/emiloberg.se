@@ -26,8 +26,6 @@ export default ({ mockup }) => {
 		width: (100 - mockupSize.left - mockupSize.right) + '%'
 	};
 
-	console.log('mockupImage', mockupImage);
-
 	const mockupLazyImage = mockupImage.images.length > 1
 		? mockupImage.src + '|' +  mockupImage.images[1].path
 		: mockupImage.src;

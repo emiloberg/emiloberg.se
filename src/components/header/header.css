@@ -1,0 +1,105 @@
+.header {
+    background-color: #2F302F;
+    padding-top: 5rem;
+    font-family: OpenSans, "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+    color: rgba(255, 255, 255, .92);
+    font-size: 1.6rem;
+}
+
+@media only screen and (min-width: 40em) {
+    .header {
+        font-size: 2rem;
+    }
+}
+
+.headerInner {
+    display: flex;
+    margin: 0 auto;
+    max-width: 100rem;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    padding: 5rem 5rem 10rem 5rem;
+}
+
+@media only screen and (min-width: 36.25em) {
+    .headerInner {
+        background-position: right bottom;
+    }
+}
+
+.name {
+    font-family: Adelle, Arial;
+    color: rgba(255, 255, 255, .92);
+    font-size: 5rem;
+    font-weight: 800;
+    padding: 0;
+    text-align: left;
+    line-height: 1;
+    color: #f1269d;
+    background-image: -webkit-linear-gradient(120deg,#e27629,#f1269d);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+
+    max-width: 30rem;
+    -webkit-text-fill-color: transparent;
+
+    padding-right: 20rem;
+
+    animation: NameAnim 7s ease infinite;
+}
+
+
+@media only screen and (min-width: 56.25em) {
+    .name {
+        font-size: 12rem;
+    }
+}
+
+@keyframes NameAnim {
+    0% {
+        background-position: 10% 0
+    }
+    50% {
+        background-position: 91% 100%
+    }
+    100% {
+        background-position: 10% 0
+    }
+}
+
+
+.header p {
+    display: inline-block;
+    /*max-width: 55rem;*/
+    padding-bottom: 1em;
+}
+
+.links {
+    /*padding: 5rem 2rem;*/
+}
+
+.links li {
+    margin: 0;
+    /*padding: 0 2rem;*/
+    padding-right: 2rem;
+    /*text-align: center;*/
+    display: inline-block;
+}
+
+.header a {
+    color: rgba(255, 255, 255, .92);
+    text-decoration: none;
+    box-shadow: inset 0 -1px 0 #f1269d;
+    transition: box-shadow 180ms;
+}
+
+.header a:hover {
+    box-shadow: inset 0 -1.3em 0 #f1269d;
+}
+
+
+
+
+
+

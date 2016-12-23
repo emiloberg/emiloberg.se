@@ -90,3 +90,12 @@
         height: 10rem;
     }
 }
+
+
+
+.rainbow {
+    color: #f1269d;
+    background-image: -webkit-linear-gradient(120deg,#e27629,#f1269d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

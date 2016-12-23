@@ -1,4 +1,3 @@
-
 .twoUp {
     display: flex;
     flex-direction: column;
@@ -19,8 +18,19 @@
 
 @media only screen and (min-width: 65.625em) {
     .twoUp {
-        align-items: flex-start;
+        align-items: stretch;
         flex-direction: row;
         width: auto;
+    }
+}
+
+.twoUpInner {
+    max-width: 65rem;
+    width: 100%;
+}
+
+@media only screen and (min-width: 65.625em) {
+    .twoUpInner {
+        max-width: inherit;
     }
 }

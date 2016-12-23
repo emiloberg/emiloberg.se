@@ -47,7 +47,7 @@
     width: 100%;
 }
 .code {
-    font-family: "Andale Mono", "Courier New", Courier, "Lucida Console", Monaco, monospace;
+    font-family: Menlo, "Andale Mono", "Courier New", Courier, "Lucida Console", Monaco, monospace;
     font-size: 1.5rem;
     line-height: 1.2;
     font-weight: bold;

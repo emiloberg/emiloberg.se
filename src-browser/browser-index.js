@@ -79,7 +79,7 @@ import particlesConfig from './particles.conf.json';
 }());
 
 (function(){
-	particlesJS('particles', particlesConfig);
+	// particlesJS('particles', particlesConfig);
 }());
 
 (function(){

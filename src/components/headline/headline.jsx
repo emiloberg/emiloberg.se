@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import styles from './headline.css';
 import Icon from 'components/icon/icon'
 
-export default ({ type, children, icon, withText = false, html }) => {
+export default ({ prefix, color, type, children, icon, withText = false, html }) => {
 	let heading;
 	if(type === 'section') {
 		if (html) {
@@ -15,6 +15,7 @@ export default ({ type, children, icon, withText = false, html }) => {
 						classnames({
 							[styles.h1]: true,
 							[styles.withText]: withText,
+							[styles.rainbow]: color === 'rainbow'
 						})}
 				/>
 			);
@@ -23,7 +24,8 @@ export default ({ type, children, icon, withText = false, html }) => {
 				<h1 className={
 					classnames({
 						[styles.h1]: true,
-						[styles.withText]: withText
+						[styles.withText]: withText,
+						[styles.rainbow]: color === 'rainbow'
 					})}
 				>
 					{ children }
@@ -38,8 +40,19 @@ export default ({ type, children, icon, withText = false, html }) => {
 			</h2>
 		);
 	} else {
+
+
+
+		const headingInner = prefix
+			? <span>{ prefix }</span> + { children }
+			: children;
+
 		heading = (
-			<h3 className={ classnames(styles.h3, styles[type]) }>
+			<h3 className={ classnames({
+				[styles.h3]: true,
+				[styles[type]]: true,
+				[styles.rainbow]: color === 'rainbow'
+			})}>
 				{ children }
 			</h3>
 		);
