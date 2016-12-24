@@ -70,3 +70,14 @@
     max-width: 65rem;
     margin-top: 2rem;
 }
+
+.button.personal {
+    /*font-size: 2rem;*/
+    line-height: inherit;
+    padding: 1rem;
+    color: #2c3a7b;
+}
+
+.personal:hover {
+    color: white;
+}

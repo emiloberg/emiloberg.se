@@ -11,7 +11,18 @@
 }
 
 .paddingmedium {
-    padding: 2em 0;
+    padding: 7rem 0 2rem 0;
+}
+
+@media only screen and (min-width: 65.625em) {
+    .paddingmedium {
+        padding-top: 12rem;
+    }
+}
+
+
+.paddingstart {
+    padding: 20rem 0 2rem 0;
 }
 
 .relative {

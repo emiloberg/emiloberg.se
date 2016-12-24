@@ -1,4 +1,5 @@
 .header {
+    position: relative;
     background-color: #2F302F;
     padding-top: 5rem;
     font-family: OpenSans, "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
@@ -6,26 +7,15 @@
     font-size: 1.6rem;
 }
 
-@media only screen and (min-width: 40em) {
-    .header {
-        font-size: 2rem;
-    }
-}
-
 .headerInner {
     display: flex;
+    flex-direction: column;
     margin: 0 auto;
     max-width: 100rem;
     background-size: auto 100%;
     background-repeat: no-repeat;
-    background-position: left bottom;
-    padding: 5rem 5rem 10rem 5rem;
-}
-
-@media only screen and (min-width: 36.25em) {
-    .headerInner {
-        background-position: right bottom;
-    }
+    background-position: center bottom;
+    padding: 0 5rem 20rem 5rem;
 }
 
 .name {
@@ -40,66 +30,128 @@
     background-image: -webkit-linear-gradient(120deg,#e27629,#f1269d);
     background-size: 200% 200%;
     -webkit-background-clip: text;
-
-    max-width: 30rem;
     -webkit-text-fill-color: transparent;
-
-    padding-right: 20rem;
-
+    padding-bottom: 2rem;
     animation: NameAnim 7s ease infinite;
 }
 
+@keyframes NameAnim {
+    0% { background-position: 10% 0 }
+    50% { background-position: 91% 100% }
+    100% { background-position: 10% 0  }
+}
+
+@media only screen and (min-width: 40em) {
+    .name {
+        font-size: 8rem;
+    }
+
+    .header {
+        font-size: 2rem;
+    }
+
+    .headerInner {
+        background-position: right bottom;
+    }
+}
 
 @media only screen and (min-width: 56.25em) {
     .name {
         font-size: 12rem;
+        max-width: 30rem;
+        padding-right: 20rem;
+        padding-bottom: 0;
+    }
+
+    .headerInner {
+        flex-direction: row;
+        padding-top: 10rem;
     }
 }
-
-@keyframes NameAnim {
-    0% {
-        background-position: 10% 0
-    }
-    50% {
-        background-position: 91% 100%
-    }
-    100% {
-        background-position: 10% 0
-    }
-}
-
 
 .header p {
     display: inline-block;
-    /*max-width: 55rem;*/
+    max-width: 50rem;
     padding-bottom: 1em;
 }
 
-.links {
-    /*padding: 5rem 2rem;*/
-}
-
-.links li {
-    margin: 0;
-    /*padding: 0 2rem;*/
-    padding-right: 2rem;
-    /*text-align: center;*/
-    display: inline-block;
-}
-
-.header a {
+.headerInner a {
     color: rgba(255, 255, 255, .92);
     text-decoration: none;
     box-shadow: inset 0 -1px 0 #f1269d;
     transition: box-shadow 180ms;
 }
 
-.header a:hover {
+.headerInner a:hover {
     box-shadow: inset 0 -1.3em 0 #f1269d;
 }
 
+/**
+ * Contacts card
+ */
 
+.contactsCard {
+    position: absolute;
+    transform: translateY(-50%);
+    width: 100%;
+}
 
+.contactsCardRetainer {
+    margin: 0 auto;
+    max-width: 110rem;
+}
 
+.contactsInner {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    color: #2F302F;
+    margin: 0 5rem;
+    background-color: white;
+    padding: 2rem 2rem;
+    border-radius: 2px;
+}
 
+.personal {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 1rem 0;
+}
 
+.personal li {
+    display: inline-block;
+    padding: 0 1rem;
+}
+
+.personal a {
+    text-decoration: none;
+    transition: color 180ms;
+    color: #2c3a7b;
+}
+
+.personal a:hover {
+    color: #f1269d;
+
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.links li {
+    margin: 0;
+    display: inline-block;
+    flex-grow: 1;
+}
+
+.links a {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    color: #2c3a7b;
+    margin: .5rem;
+    background-color: #F0F2F9;
+    border-radius: 6rem;
+}

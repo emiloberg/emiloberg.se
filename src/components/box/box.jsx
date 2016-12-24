@@ -3,13 +3,15 @@ import React from 'react';
 import classnames from 'classnames';
 import styles from './box.css';
 
-export default ({ children, type = 'single', no = '', flex}) => {
+export default ({ children, type = 'single', no = '', headlineOnly = false }) => {
+	console.log('headlineOnly', headlineOnly);
 	const out = (
 		<div
 			className={classnames({
 				[styles.box]: true,
 				[styles[type]]: true,
-				[styles[no]]: true
+				[styles[no]]: true,
+				[styles.headlineOnly]: headlineOnly,
 			})}
 		>
 			{ children }

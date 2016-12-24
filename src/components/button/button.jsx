@@ -6,7 +6,7 @@ import styles from './button.css';
 import Icon from '../icon/icon';
 
 
-export default ({ type, url, side, color, small }) => {
+export default ({ type, url, side, color, small, children }) => {
 	let button;
 	if (type === 'github') {
 		button = (
@@ -21,6 +21,19 @@ export default ({ type, url, side, color, small }) => {
 			>
 				<span>Fork me on</span>
 				<Icon className={ styles.iconGitHub } icon="github" />
+			</a>
+		);
+	} if (type === 'personal') {
+		button = (
+			<a
+				className={ classnames({
+					[styles.button]: true,
+					[styles.personal]: true,
+				})}
+				href={ url }
+				rel="noopener"
+			>
+				{ children }
 			</a>
 		);
 	}

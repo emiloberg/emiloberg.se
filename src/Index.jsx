@@ -3,6 +3,7 @@ import React from 'react';
 import MainSection from './components/mainSection/mainSection';
 import Headline from './components/headline/headline';
 import Box from './components/box/box';
+import BoxFullHeight from './components/boxFullHeight/boxFullHeight';
 import TwoUp from './components/twoUp/twoUp';
 import Text from './components/text/text';
 import SvgDropShadow from './components/svgDropShadow/svgDropShadow';
@@ -10,53 +11,16 @@ import Mockup from './components/mockup/mockup';
 import Button from './components/button/button';
 import Terminal from './components/terminal/terminal';
 import Particles from './components/particles/particles';
+import Header from './components/header/header';
 
 import globalStyle from './index.css';
 
 import Media from 'components/media/media'
 
-
-
-/**
- * decs={['SingleWhiteSlantedBox']}
- * decs="SingleWhiteSlantedBox"
- * decs={[{ type: 'SingleWhiteSlantedBox' }]}
- */
-
-
-//
-//
-
-// document.addEventListener("DOMContentLoaded",
-// 	function() {
-// 		var div, n,
-// 			v = document.getElementsByClassName("youtube-player");
-// 		for (n = 0; n < v.length; n++) {
-// 			div = document.createElement("div");
-// 			div.setAttribute("data-id", v[n].dataset.id);
-// 			div.innerHTML = labnolThumb(v[n].dataset.id);
-// 			div.onclick = labnolIframe;
-// 			v[n].appendChild(div);
-// 		}
-// 	});
-//
-// function labnolThumb(id) {
-// 	return `<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg">`;
-// }
-//
-// function labnolIframe() {
-// 	var iframe = document.createElement("iframe");
-// 	var embed = "https://www.youtube.com/embed/ID?autoplay=1";
-// 	iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
-// 	iframe.setAttribute("frameborder", "0");
-// 	iframe.setAttribute("allowfullscreen", "1");
-// 	this.parentNode.replaceChild(iframe, this);
-// }
-
 export default () => (
 	<div>
-		<SvgDropShadow />
-		<MainSection bg="purple">
+		<Header />
+		<MainSection bg="blue" padding="start">
 			<Headline type="section" icon="tickets">Public Speaking</Headline>
 			<Box>
 				<Media mediaId="eWmkBNBTbMM" type="yt" />
@@ -81,7 +45,7 @@ export default () => (
 				<Text>Presented at J.Boye Conference Aarhus, Denmark and at Intranätverk, Göteborg, Sweden</Text>
 			</Box>
 		</MainSection>
-		<MainSection bg="blue">
+		<MainSection bg="purple">
 			<Headline type="section" icon="gift">Client Work</Headline>
 			<Text standalone>Phosfluorescently scale optimal e-business rather than standards compliant niches. Compellingly deploy state of the art convergence rather than alternative paradigms. Intrinsicly negotiate cross-media growth strategies via team building paradigms.</Text>
 			<TwoUp>
@@ -111,31 +75,27 @@ export default () => (
 		</MainSection>
 		<MainSection bg="black" relative>
 			<Particles />
-			<Headline icon="robot" type="section" html="Internet of<br />Things Things"></Headline>
-			<TwoUp noMargin>
-				<Box type="twoUp" no="first">
-					<Media mediaId="headphones.png" type="image" />
-					<Headline>Node-RED Mopidy</Headline>
-					<Text>This module enables you to control your Mopidy servers from Node-RED. This means that you - from Node-RED - can play all kinds of music, be it files on disk or streamed from Spotify, SoundCloud, Google Play Music or others.</Text>
-				</Box>
-				<Box type="twoUp" no="last">
-					<Media mediaId="lights.png" type="image" />
-					<Headline>Node-RED Tellstick</Headline>
-					<Text>Remote control everything.</Text>
-				</Box>
-			</TwoUp>
-
+			<Headline icon="robot" type="section" html="Internet of<br />Things Things" />
 			<TwoUp>
 				<Box type="twoUp" no="first">
+					<BoxFullHeight>
+						<Media mediaId="mopidy.png" type="image" />
+						<Headline prefix="Node-RED" color="rainbow">Mopidy</Headline>
+						<Text>This module enables you to control your Mopidy server from Node-RED. This means that you - from Node-RED on e.g. a Raspberry Pi - can play all kinds of music, be it files on disk or streamed from Spotify, SoundCloud, Google Play Music or others.</Text>
+					</BoxFullHeight>
 					<Button small color="black" type="github" url="https://github.com/emiloberg/oppna-program-reklistan-app/" />
 				</Box>
 				<Box type="twoUp" no="last">
+					<BoxFullHeight>
+						<Media mediaId="tellstick.png" type="image" />
+						<Headline>Node-RED Tellstick</Headline>
+						<Text>Remote control everything.</Text>
+					</BoxFullHeight>
 					<Button small color="black" type="github" url="https://github.com/emiloberg/oppna-program-reklistan-app/" />
 				</Box>
 			</TwoUp>
-
-			<TwoUp small>
-				<Box type="twoUp" no="first">
+			<TwoUp>
+				<Box type="twoUp" no="first" headlineOnly>
 					<Headline type="side">Node-RED Advanced Ping</Headline>
 				</Box>
 				<Box type="twoUp" no="last">
@@ -143,8 +103,8 @@ export default () => (
 					<Button small color="black" type="github" url="https://github.com/emiloberg/oppna-program-reklistan-app/" />
 				</Box>
 			</TwoUp>
-			<TwoUp small>
-				<Box type="twoUp" no="first">
+			<TwoUp>
+				<Box type="twoUp" no="first" headlineOnly>
 					<Headline type="side">Node-RED File Function</Headline>
 				</Box>
 				<Box type="twoUp" no="last">
@@ -153,5 +113,6 @@ export default () => (
 				</Box>
 			</TwoUp>
 		</MainSection>
+		<SvgDropShadow />
 	</div>
 );
