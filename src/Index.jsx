@@ -11,6 +11,7 @@ import Button from './components/button/button';
 import Terminal from './components/terminal/terminal';
 import Particles from './components/particles/particles';
 import Header from './components/header/header';
+import Contacts from './components/contacts/contacts';
 
 import globalStyle from './index.css';
 
@@ -248,5 +249,9 @@ export default () => (
 				</Box>
 			</TwoUp>
 		</Section>
+    <Section bg="green" padding="footer">
+      <Headline type="section">That's all folks!</Headline>
+      <Contacts />
+    </Section>
 	</div>
 );
