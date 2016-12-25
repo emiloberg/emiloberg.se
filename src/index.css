@@ -1,63 +1,9 @@
 @font-face {
-    font-family: 'Charter';
-    src: url('./fonts/charter.eot'); /* IE9 Compat Modes */
-    src: url('./fonts/charter.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('./fonts/charter.woff2') format('woff2'), /* Modern Browsers */
-    url('./fonts/charter.woff') format('woff'), /* Modern Browsers */
-    url('./fonts/charter.ttf') format('truetype'); /* Safari, Android, iOS */
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Kievit';
-    src: url('./fonts/kievit.eot'); /* IE9 Compat Modes */
-    src: url('./fonts/kievit.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('./fonts/kievit.woff2') format('woff2'), /* Modern Browsers */
-    url('./fonts/kievit.woff') format('woff'), /* Modern Browsers */
-    url('./fonts/kievit.ttf') format('truetype'); /* Safari, Android, iOS */
-    font-style: normal;
-}
-
-
-
-@font-face {
     font-family: OpenSans;
     font-weight: 400;
     font-style: normal;
     src: url('./fonts/opensans-regular-webfont.eot');
     src: url('./fonts/opensans-regular-webfont.eot?#iefix') format("embedded-opentype"), url('./fonts/opensans-regular-webfont.woff2') format("woff2"), url('./fonts/opensans-regular-webfont.woff') format("woff"), url('./fonts/opensans-regular-webfont.ttf') format("truetype");
-}
-
-@font-face {
-    font-family: OpenSans;
-    font-weight: 700;
-    font-style: normal;
-    src: url('./fonts/opensans-bold-webfont.eot');
-    src: url('./fonts/opensans-bold-webfont.eot?#iefix') format("embedded-opentype"), url('./fonts/opensans-bold-webfont.woff2') format("woff2"), url('./fonts/opensans-bold-webfont.woff') format("woff"), url('./fonts/opensans-bold-webfont.ttf') format("truetype");
-}
-
-@font-face {
-    font-family: OpenSans;
-    font-weight: 400;
-    font-style: italic;
-    src: url('./fonts/opensans-italic-webfont.eot');
-    src: url('./fonts/opensans-italic-webfont.eot?#iefix') format("embedded-opentype"), url('./fonts/opensans-italic-webfont.woff2') format("woff2"), url('./fonts/opensans-italic-webfont.woff') format("woff"), url('./fonts/opensans-italic-webfont.ttf') format("truetype");
-}
-
-@font-face {
-    font-family: Adelle;
-    font-weight: 300;
-    font-style: normal;
-    src: url('./fonts/adelle-light-webfont.eot');
-    src: url('./fonts/adelle-light-webfont.eot?#iefix') format("embedded-opentype"), url('./fonts/adelle-light-webfont.woff2') format("woff2"), url('./fonts/adelle-light-webfont.woff') format("woff"), url('./fonts/adelle-light-webfont.ttf') format("truetype");
-}
-
-@font-face {
-    font-family: Adelle;
-    font-weight: 400;
-    font-style: normal;
-    src: url('./fonts/adelle-reg-webfont.eot');
-    src: url('./fonts/adelle-reg-webfont.eot?#iefix') format("embedded-opentype"), url('./fonts/adelle-reg-webfont.woff2') format("woff2"), url('./fonts/adelle-reg-webfont.woff') format("woff"), url('./fonts/adelle-reg-webfont.ttf') format("truetype");
 }
 
 @font-face {
@@ -67,15 +13,6 @@
     src: url('./fonts/adelle-bold-webfont.eot');
     src: url('./fonts/adelle-bold-webfont.eot?#iefix') format("embedded-opentype"), url('./fonts/adelle-bold-webfont.woff2') format("woff2"), url('./fonts/adelle-bold-webfont.woff') format("woff"), url('./fonts/adelle-bold-webfont.ttf') format("truetype");
 }
-
-@font-face {
-    font-family: Adelle;
-    font-weight: 800;
-    font-style: normal;
-    src: url('./fonts/adelle-extrabold-webfont.eot');
-    src: url('./fonts/adelle-extrabold-webfont.eot?#iefix') format("embedded-opentype"), url('./fonts/adelle-extrabold-webfont.woff2') format("woff2"), url('./fonts/adelle-extrabold-webfont.woff') format("woff"), url('./fonts/adelle-extrabold-webfont.ttf') format("truetype");
-}
-
 
 
 
@@ -179,10 +116,6 @@ p > a:visited {
 
 p > a:hover {
     color: #ffeb3b;
-}
-
-em {
-    font-style: italic;
 }
 
 ::-moz-selection { background: #f1269d; }

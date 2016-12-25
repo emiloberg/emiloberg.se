@@ -138,7 +138,7 @@ export default () => (
               Use simple Markdown comments in your (s)css and let the generator create a styleguide for you. The styleguide will always tell the truth.
             </p>
             <p>
-              One of the few, if not the only styleguide generator, which is actually <em>live</em> as it will always use the current style of the site and not the style as it looked when the generator ran.
+              One of the few, if not the only styleguide generator, which is actually *live* as it will always use the current style of the site and not the style as it looked when the generator ran.
             </p>
             <Button color="white" type="github" url="https://github.com/emiloberg/markdown-styleguide-generator" />
           </Text>
