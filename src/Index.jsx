@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MainSection from './components/mainSection/mainSection';
+import Section from './components/section/section';
 import Headline from './components/headline/headline';
 import Box from './components/box/box';
 import BoxFullHeight from './components/boxFullHeight/boxFullHeight';
@@ -19,7 +19,7 @@ import Media from 'components/media/media'
 export default () => (
 	<div>
 		<Header />
-		<MainSection bg="blue" padding="start">
+		<Section bg="blue" padding="start">
 			<Headline type="section" icon="tickets">Public Speaking</Headline>
 			<TwoUp>
 				<Box type="twoUp" no="first">
@@ -99,8 +99,8 @@ export default () => (
           </p>
         </Text>
 			</Box>
-		</MainSection>
-		<MainSection bg="purple">
+		</Section>
+		<Section bg="purple">
 			<Headline type="section" icon="gift">Open Source</Headline>
       <Box>
         <Mockup mockup="hubotJira" />
@@ -180,8 +180,8 @@ export default () => (
 				<Button color="white" type="github" url="https://github.com/emiloberg/liferay-ddmtool" />
 			</Box>
 
-		</MainSection>
-		<MainSection bg="black" relative>
+		</Section>
+		<Section bg="black" relative>
 			<Particles />
 			<Headline icon="robot" type="section" html="Internet of<br />Things Things" />
       <Text standalone>
@@ -247,6 +247,6 @@ export default () => (
 					<Button color="white" type="github" url="https://github.com/emiloberg/node-red-contrib-file-function" />
 				</Box>
 			</TwoUp>
-		</MainSection>
+		</Section>
 	</div>
 );

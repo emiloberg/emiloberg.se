@@ -6,20 +6,6 @@
     width: 100%;
     position: relative;
     z-index: 3;
-    /*
-        TODO: Fix drop shadow on other browsers
-        See: http://stackoverflow.com/questions/3186688/drop-shadow-for-png-image-in-css
-     */
-    /*-webkit-filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.5));*/
-    /*filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.5));*/
-
-
-
-
-    /*-webkit-filter: drop-shadow(0 0 50px rgba(0,0,0,0.5));*/
-    /*filter: url(#dropShadow);*/
-    /*-ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#808080')";*/
-    /*filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=0, Color='#808080')";*/
 }
 
 .screenshot {

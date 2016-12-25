@@ -1,7 +1,7 @@
 import React from 'react';
 
 import classnames from 'classnames';
-import styles from './mainSection.css';
+import styles from './section.css';
 
 export default ({ bg, padding = 'medium', children, id, relative }) => {
 	return (
@@ -13,8 +13,7 @@ export default ({ bg, padding = 'medium', children, id, relative }) => {
 					[styles['padding' + padding]]: true,
 					[styles.relative]: relative
 			})}
-
-			>
+		>
 			<div className={ styles.section }>
 				{ children }
 			</div>

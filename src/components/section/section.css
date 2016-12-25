@@ -20,7 +20,6 @@
     }
 }
 
-
 .paddingstart {
     padding: 20rem 0 2rem 0;
 }
@@ -29,6 +28,9 @@
     position: relative;
 }
 
+/**
+ * COLOR VARIATIONS
+ */
 .bgpurple {
     background-color: #543D95;
 }
@@ -42,9 +44,9 @@
         -1px -1px #543D95;
 }
 
-.bgpurple p > a:hover {
-    color: #f1269d;
-}
+/*.bgpurple p > a:hover {*/
+    /*color: #f1269d;*/
+/*}*/
 
 .bgblue {
     background-color: #4155B4;
@@ -59,9 +61,9 @@
         -1px -1px #4155B4;
 }
 
-.bgblue p > a:hover {
-    color: #ffeb3b;
-}
+/*.bgblue p > a:hover {*/
+    /*color: #ffeb3b;*/
+/*}*/
 
 .bgblack {
     background-color: #3D3C40;
@@ -76,6 +78,6 @@
         -1px -1px #3D3C40;
 }
 
-.bgblack p > a:hover {
-    color: #f1269d;
-}
+/*.bgblack p > a:hover {*/
+    /*color: #f1269d;*/
+/*}*/
