@@ -4,30 +4,29 @@ import classnames from 'classnames';
 import styles from './headline.css';
 import Icon from 'components/icon/icon'
 
-export default ({ prefix, color, type, children, icon, withText = false, html }) => {
+export default ({ prefix, prefixColor, type, children, icon, withText = false, html }) => {
 	let heading;
+  let fixedPrefix = '';
+  if (prefix) {
+    fixedPrefix = <span className={ styles[`prefix${prefixColor}`] }>{ prefix }</span>
+  }
+
 	if(type === 'section') {
+		const classes = {
+			[styles.h1]: true,
+			[styles.withText]: withText,
+		};
+
 		if (html) {
 			heading = (
 				<h1
 					dangerouslySetInnerHTML={{__html: html}}
-					className={
-						classnames({
-							[styles.h1]: true,
-							[styles.withText]: withText,
-							[styles.rainbow]: color === 'rainbow'
-						})}
+					className={classnames(classes)}
 				/>
 			);
 		} else {
 			heading = (
-				<h1 className={
-					classnames({
-						[styles.h1]: true,
-						[styles.withText]: withText,
-						[styles.rainbow]: color === 'rainbow'
-					})}
-				>
+				<h1 className={classnames(classes)}>
 					{ children }
 				</h1>
 			);
@@ -41,19 +40,17 @@ export default ({ prefix, color, type, children, icon, withText = false, html })
 		);
 	} else {
 
+		const classes = {
+			[styles.h3]: true,
+		};
 
-
-		const headingInner = prefix
-			? <span>{ prefix }</span> + { children }
-			: children;
+		if (type) {
+			classes[styles[type]] = true
+		}
 
 		heading = (
-			<h3 className={ classnames({
-				[styles.h3]: true,
-				[styles[type]]: true,
-				[styles.rainbow]: color === 'rainbow'
-			})}>
-				{ children }
+			<h3 className={ classnames(classes)}>
+        { fixedPrefix } { children }
 			</h3>
 		);
 	}
@@ -62,7 +59,7 @@ export default ({ prefix, color, type, children, icon, withText = false, html })
 		const iconStyle = type === 'section' ? styles.icon : styles.iconSmall;
 		return (
 			<div className={ styles.wrapper }>
-				{ heading }
+        { heading }
 				<div className={ iconStyle }>
 					<Icon icon={ icon } />
 				</div>

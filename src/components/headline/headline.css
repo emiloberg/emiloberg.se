@@ -11,20 +11,13 @@
     line-height: 1;
 }
 
-.h2 {
+.h2, .h3 {
     color: #fff;
-    font-size: 2.8rem;
     font-weight: 600;
-    line-height: 1.2;
-    padding: 2.7rem 0;
-}
-
-.h3 {
-    color: #fff;
-    font-size: 2.8rem;
-    font-weight: 600;
-    line-height: 1.2;
-    padding: 2.7rem 0;
+    font-size: 2.6111111rem;
+    line-height: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .h3.side {
@@ -93,9 +86,13 @@
 
 
 
-.rainbow {
-    color: #f1269d;
-    background-image: -webkit-linear-gradient(120deg,#e27629,#f1269d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+/*.rainbow {*/
+    /*color: #f1269d;*/
+    /*background-image: -webkit-linear-gradient(120deg,#e27629,#f1269d);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+/*}*/
+
+.prefixred {
+    color: #ff5722;
 }

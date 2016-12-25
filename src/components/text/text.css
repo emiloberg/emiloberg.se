@@ -3,6 +3,7 @@
     font-family: OpenSans, "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
     color: #fff;
     font-size: 1.6rem;
+    flex-grow: 1;
 }
 
 @media only screen and (min-width: 40em) {
@@ -12,5 +13,7 @@
 }
 
 .standalone {
-    padding: 3rem 0 7rem 0;
+    width: 90%;
+    max-width: 65rem;
+    padding: 5rem 0 15rem 0;
 }

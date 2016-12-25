@@ -85,14 +85,14 @@
 
 @media only screen and (min-width: 65.625em) {
     .twoUpUneven.first {
-        width: 20rem;
-        padding: 0 1.25rem 0 0;
+        width: 19rem;
+        padding: 0 2.25rem 0 0;
         margin: 0;
     }
 
     .twoUpUneven.last {
-        width: 42.5rem;
-        padding: 0 0 0 1.25rem;
+        width: 41.5rem;
+        padding: 0 0 0 2.25rem;
         margin: 0;
     }
 

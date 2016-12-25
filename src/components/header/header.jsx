@@ -37,7 +37,7 @@ export default () => {
                 <li><Button type="personal" url="https://facebook.com/emiloberg">Facebook</Button></li>
                 <li><Button type="personal" url="https://www.instagram.com/emil_oberg/">Instagram</Button></li>
                 <li><Button type="personal" url="https://github.com/emiloberg">Github</Button></li>
-                <li><Button type="personal" url="https://stackoverflow.com/users/2533681/emil-oberg">Stack Overflow</Button></li>
+                <li><Button type="personal" url="https://stackoverflow.com/users/2533681/emil-oberg">Stack&nbsp;O.</Button></li>
               </ul>
             </div>
           </div>

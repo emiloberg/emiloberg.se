@@ -3,13 +3,18 @@ import React from 'react';
 import classnames from 'classnames';
 import styles from './text.css';
 
-export default ({ children, standalone }) => {
+export default ({ children, standalone}) => {
+
+	const fixedChildren = typeof children === 'string'
+		? <p>{ children }</p>
+		: children;
+
 	return (
-		<p className={classnames({
+		<div className={classnames({
 			[styles.text]: true,
 			[styles.standalone]: standalone
 		})}>
-			{ children }
-		</p>
+			{ fixedChildren }
+		</div>
 	)
 };

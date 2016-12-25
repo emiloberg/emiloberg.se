@@ -4,16 +4,19 @@ import classnames from 'classnames';
 import styles from './box.css';
 
 export default ({ children, type = 'single', no = '', headlineOnly = false }) => {
-	console.log('headlineOnly', headlineOnly);
+	const classes = {
+    [styles.box]: true,
+    [styles[type]]: true,
+    [styles.headlineOnly]: headlineOnly,
+  };
+
+  if (no) {
+    classes[styles[no]] = true
+  }
+
+
 	const out = (
-		<div
-			className={classnames({
-				[styles.box]: true,
-				[styles[type]]: true,
-				[styles[no]]: true,
-				[styles.headlineOnly]: headlineOnly,
-			})}
-		>
+		<div className={classnames(classes)}>
 			{ children }
 		</div>
 	);

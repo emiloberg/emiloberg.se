@@ -163,7 +163,7 @@ body {
     /*font-size: 1.3em;*/
     /*font-size: 62.5%;*/
 
-    line-height: 1.58;
+    line-height: 1.5rem;
 
 
     /*font-size: 21px;*/
@@ -171,6 +171,31 @@ body {
     /*letter-spacing: -.003em;*/
 }
 
+p {
+    margin-bottom: 3rem;
+    line-height: 1.5;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+p > a,
+p > a:visited {
+    color: inherit;
+    text-decoration: none;
+    box-shadow: inset 0 -1px 0 white;
+    transition: box-shadow 180ms;
+}
+
+p > a:hover {
+    box-shadow: inset 0 -1.3em 0 white;
+    color: #f1269d;
+}
+
+em {
+    font-style: italic;
+}
 
 /*body:before, body:after {*/
     /*content: "";*/

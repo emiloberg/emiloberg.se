@@ -10,6 +10,12 @@
     width: 50px;
 }
 
+.sizeInline {
+    height: 1.6rem;
+    fill: white;
+    margin-left: .7rem;
+}
+
 .sizeFullHeight {
     height: 100%;
 }

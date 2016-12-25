@@ -72,7 +72,6 @@
 .header p {
     display: inline-block;
     max-width: 50rem;
-    padding-bottom: 1em;
 }
 
 .headerInner a {
@@ -142,7 +141,7 @@
 .links li {
     margin: 0;
     display: inline-block;
-    flex-grow: 1;
+    flex: 1;
 }
 
 .links a {

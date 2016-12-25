@@ -6,15 +6,14 @@ import styles from './button.css';
 import Icon from '../icon/icon';
 
 
-export default ({ type, url, side, color, small, children }) => {
+export default ({ type, url, side, color, children }) => {
 	let button;
 	if (type === 'github') {
 		button = (
 			<a
 				className={ classnames({
 					[styles.button]: true,
-					[styles['color' + color]]: true,
-					[styles.small]: small,
+					[styles['color' + color]]: true
 				})}
 				href={ url }
 				rel="noopener"
