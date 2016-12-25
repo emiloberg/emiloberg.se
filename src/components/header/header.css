@@ -74,16 +74,16 @@
     max-width: 50rem;
 }
 
-.headerInner a {
-    color: rgba(255, 255, 255, .92);
-    text-decoration: none;
-    box-shadow: inset 0 -1px 0 #f1269d;
-    transition: box-shadow 180ms;
-}
+/*.headerInner a {*/
+    /*color: rgba(255, 255, 255, .92);*/
+    /*text-decoration: none;*/
+    /*box-shadow: inset 0 -1px 0 #f1269d;*/
+    /*transition: box-shadow 180ms;*/
+/*}*/
 
-.headerInner a:hover {
-    box-shadow: inset 0 -1.3em 0 #f1269d;
-}
+/*.headerInner a:hover {*/
+    /*box-shadow: inset 0 -1.3em 0 #f1269d;*/
+/*}*/
 
 /**
  * Contacts card

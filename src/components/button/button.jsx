@@ -6,10 +6,10 @@ import styles from './button.css';
 import Icon from '../icon/icon';
 
 
-export default ({ type, url, side, color, children }) => {
+export default ({ type, url, color, children }) => {
 	let button;
 	if (type === 'github') {
-		button = (
+		return (
 			<a
 				className={ classnames({
 					[styles.button]: true,
@@ -23,7 +23,7 @@ export default ({ type, url, side, color, children }) => {
 			</a>
 		);
 	} if (type === 'personal') {
-		button = (
+		return (
 			<a
 				className={ classnames({
 					[styles.button]: true,
@@ -36,14 +36,4 @@ export default ({ type, url, side, color, children }) => {
 			</a>
 		);
 	}
-
-	if (side) {
-		return (
-			<div className={ styles.side }>
-				{ button }
-			</div>
-		)
-	}
-
-	return button;
 };

@@ -29,6 +29,53 @@
     position: relative;
 }
 
-.bgpurple { background-color: #543D95; }
-.bgblue { background-color: #4155B4; }
-.bgblack { background-color: #3D3C40; }
+.bgpurple {
+    background-color: #543D95;
+}
+
+.bgpurple p > a,
+.bgpurple p > a:visited {
+    text-shadow:
+        1px 1px #543D95,
+        1px -1px #543D95,
+        -1px 1px #543D95,
+        -1px -1px #543D95;
+}
+
+.bgpurple p > a:hover {
+    color: #f1269d;
+}
+
+.bgblue {
+    background-color: #4155B4;
+}
+
+.bgblue p > a,
+.bgblue p > a:visited {
+    text-shadow:
+        1px 1px #4155B4,
+        1px -1px #4155B4,
+        -1px 1px #4155B4,
+        -1px -1px #4155B4;
+}
+
+.bgblue p > a:hover {
+    color: #ffeb3b;
+}
+
+.bgblack {
+    background-color: #3D3C40;
+}
+
+.bgblack p > a,
+.bgblack p > a:visited {
+    text-shadow:
+        1px 1px #3D3C40,
+        1px -1px #3D3C40,
+        -1px 1px #3D3C40,
+        -1px -1px #3D3C40;
+}
+
+.bgblack p > a:hover {
+    color: #f1269d;
+}

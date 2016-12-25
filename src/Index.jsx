@@ -6,7 +6,6 @@ import Box from './components/box/box';
 import BoxFullHeight from './components/boxFullHeight/boxFullHeight';
 import TwoUp from './components/twoUp/twoUp';
 import Text from './components/text/text';
-import SvgDropShadow from './components/svgDropShadow/svgDropShadow';
 import Mockup from './components/mockup/mockup';
 import Button from './components/button/button';
 import Terminal from './components/terminal/terminal';
@@ -43,7 +42,7 @@ export default () => (
               How can you use NativeScript to build a Native Mobile App in Javascript?
             </p>
             <p>
-              Full tutorial, from empty javascript file to functional RSS reader ready to be deployed to your iOS or Android device.
+              Full tutorial, from an empty .js file to functional RSS reader ready to be deployed to your iOS or Android device. <a rel="noopener" href="https://github.com/emiloberg/Uppsala.js-NativeScript-demo">Code available at GitHub</a>
             </p>
           </Text>
 				</Box>
@@ -66,10 +65,10 @@ export default () => (
           <Headline>Webpack 2 vs Browserify, Grunt, Gulp, Rollup</Headline>
           <Text>
             <p>
-              Introduction to the different ways of doing mobile development.
+              Introduction to Webpack 2, what is it and how does it differ from Browserify, Grunt, Gulp and Rollup?
             </p>
             <p>
-              What is native, cross compiled, web based and javascript runtime apps and how do the different technologies compare?
+              This is a preamble to the full Webpack 2 tutorial.
             </p>
           </Text>
         </Box>
@@ -103,31 +102,20 @@ export default () => (
 		</MainSection>
 		<MainSection bg="purple">
 			<Headline type="section" icon="gift">Open Source</Headline>
-			<Text standalone>Phosfluorescently scale optimal e-business rather than standards compliant niches. Compellingly deploy state of the art convergence rather than alternative paradigms. Intrinsicly negotiate cross-media growth strategies via team building paradigms.</Text>
-			<TwoUp>
-				<Box type="twoUpUneven" no="first">
-					<Mockup mockup="rekListan" />
-				</Box>
-				<Box type="twoUpUneven" no="last">
-					<Headline type="side">REK-listan</Headline>
-					<Text>Presented at Liferay North American Symposium, Boston, USA and at Liferay DevCon Darmstadt, Germany</Text>
-				</Box>
-				<Button color="white" side type="github" url="https://github.com/emiloberg/oppna-program-reklistan-app/" />
-			</TwoUp>
-			<Box>
-				<Mockup mockup="hubotJira" />
-				<Headline type="single" icon="logoSlack">Hubot Jira for Slack</Headline>
-				<Text>Phosfluorescently scale optimal e-business rather than standards compliant niches. Compellingly deploy state of the art convergence rather than alternative paradigms. Intrinsicly negotiate cross-media growth strategies via team building paradigms. Perfect for answering the question "What happend yesterday?"
+      <Box>
+        <Mockup mockup="hubotJira" />
+        <Headline type="single" icon="logoSlack">Hubot Jira for Slack</Headline>
+        <Text>
+          <p>
+            This integrations helps you get up to speed with what's happened in the project you're working on.
+          </p>
+          <p>
+            Just type <code>hubot jira changed</code> in Slack and Hubot will answer with everything which happend in Jira yesterday.
+          </p>
+        </Text>
+        <Button color="white" type="github" url="https://github.com/emiloberg/hubot-jira-servant" />
+      </Box>
 
-					hubot jira changed - Get yesterdays changed Jira issues
-				</Text>
-			</Box>
-			<Box>
-				<Terminal codeId="ddm-tool" title="emiloberg@emils-mbp:~/"/>
-				<Headline type="single" icon="logoSlack">Liferay DDM Tool</Headline>
-				<Text>Command Line Tool for authoring, uploading, downloading and synchronizing Liferay DDM related stuff (Structures and Templates) across environments. All transactions are done over JSON Web Services.</Text>
-				<Button color="white" type="github" url="https://github.com/emiloberg/oppna-program-reklistan-app/" />
-			</Box>
       <TwoUp>
         <Box type="twoUp" no="first">
           <Media mediaId="hello-world.png" type="image" />
@@ -156,10 +144,54 @@ export default () => (
           </Text>
         </Box>
       </TwoUp>
+
+			<TwoUp>
+				<Box type="twoUpUneven" no="first">
+					<Mockup mockup="rekListan" />
+				</Box>
+				<Box type="twoUpUneven" no="last">
+					<Headline type="side">REK-listan</Headline>
+					<Text>
+            <p>
+              Region Västra Götaland, VGR, estimates that they're paying 80 million SEK yearly because of prescribing the wrong drugs.
+            </p>
+            <p>
+              This iOS and Android app help their medical professionals to prescribe the right drugs.
+            </p>
+            <p>
+              Done as consultant work, but VGR loves to open source their things (yay!).
+            </p>
+          </Text>
+          <Button color="white" type="github" url="https://github.com/emiloberg/oppna-program-reklistan-app/" />
+				</Box>
+			</TwoUp>
+
+			<Box>
+				<Terminal codeId="ddm-tool" title="emiloberg@emils-mbp:~/"/>
+				<Headline type="single" icon="logoSlack">Liferay DDM Tool</Headline>
+				<Text>
+          <p>
+            Very specialized tool for everyone working with <a href="https://www.liferay.com/" rel="noopener">Liferay</a>.
+          </p>
+          <p>
+            Instead of having to manage structures and templates in the GUI in your browser, this command line to helps you for author, upload, download and sync Liferay DDM related stuff across environments.
+          </p>
+        </Text>
+				<Button color="white" type="github" url="https://github.com/emiloberg/liferay-ddmtool" />
+			</Box>
+
 		</MainSection>
 		<MainSection bg="black" relative>
 			<Particles />
 			<Headline icon="robot" type="section" html="Internet of<br />Things Things" />
+      <Text standalone>
+        <p>
+          My home is my laboratory and I'm connecting way to many things to the internet. The plants tell me when they need water, the lights can be controlled from half way around the world (the necessity of this is still pending) and my morning music plays automagically.
+        </p>
+        <p>
+          Raspberry Pi's and Arduinos are running the show and the dispatcher is <a href="https://nodered.org/" rel="noopener">Node-RED</a>. I've built a few modules myself. Take a look at them!
+        </p>
+      </Text>
 			<TwoUp>
 				<Box type="twoUp" no="first">
 					<BoxFullHeight>
@@ -171,7 +203,7 @@ export default () => (
               </p>
             </Text>
 					</BoxFullHeight>
-					<Button color="white" type="github" url="https://github.com/emiloberg/oppna-program-reklistan-app/" />
+					<Button color="white" type="github" url="https://github.com/emiloberg/node-red-contrib-mopidy" />
 				</Box>
 				<Box type="twoUp" no="last">
 					<BoxFullHeight>
@@ -186,7 +218,7 @@ export default () => (
               </p>
             </Text>
 					</BoxFullHeight>
-					<Button color="white" type="github" url="https://github.com/emiloberg/oppna-program-reklistan-app/" />
+					<Button color="white" type="github" url="https://github.com/emiloberg/node-red-contrib-tellstick" />
 				</Box>
 			</TwoUp>
 			<TwoUp>
@@ -196,10 +228,10 @@ export default () => (
 				<Box type="twoUp" no="last">
           <Text>
             <p>
-              This module enables you to control your <a href="https://www.mopidy.com/" rel="noopener">Mopidy</a> servers from Node-RED. This means that you - from Node-RED - can play all kinds of music, be it files on disk or streamed from Spotify, SoundCloud, Google Play Music or others.
+              Pings a remote server. Combine it with Node-RED Tellstick and you can start the disco lights if your servers are down!
             </p>
           </Text>
-					<Button color="white" type="github" url="https://github.com/emiloberg/oppna-program-reklistan-app/" />
+					<Button color="white" type="github" url="https://github.com/emiloberg/node-red-contrib-advanced-ping" />
 				</Box>
 			</TwoUp>
 			<TwoUp>
@@ -209,13 +241,12 @@ export default () => (
 				<Box type="twoUp" no="last">
           <Text>
             <p>
-              This module enables you to control your <a href="https://www.mopidy.com/" rel="noopener">Mopidy</a> servers from Node-RED. This means that you - from Node-RED - can play all kinds of music, be it files on disk or streamed from Spotify, SoundCloud, Google Play Music or others.
+              Help when developing for Node RED. Instead of having to write your Javascript code in a small textfield in your browser you can use your favorite editor/IDE.
             </p>
           </Text>
-					<Button color="white" type="github" url="https://github.com/emiloberg/oppna-program-reklistan-app/" />
+					<Button color="white" type="github" url="https://github.com/emiloberg/node-red-contrib-file-function" />
 				</Box>
 			</TwoUp>
 		</MainSection>
-		<SvgDropShadow />
 	</div>
 );

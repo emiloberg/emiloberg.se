@@ -184,12 +184,23 @@ p > a,
 p > a:visited {
     color: inherit;
     text-decoration: none;
-    box-shadow: inset 0 -1px 0 white;
-    transition: box-shadow 180ms;
+    /*box-shadow: inset 0 -1px 0 white;*/
+    /*transition: box-shadow 180ms;*/
+    transition: color 180ms;
+
+    border-bottom: 1px solid currentColor;
+    display: inline-block;
+    line-height: 0.95;
+    text-shadow:
+        1px 1px #3D3C40,
+        1px -1px #3D3C40,
+        -1px 1px #3D3C40,
+        -1px -1px #3D3C40;
+
 }
 
 p > a:hover {
-    box-shadow: inset 0 -1.3em 0 white;
+    /*box-shadow: inset 0 -1.3em 0 white;*/
     color: #f1269d;
 }
 
@@ -197,123 +208,15 @@ em {
     font-style: italic;
 }
 
-/*body:before, body:after {*/
-    /*content: "";*/
-    /*position: fixed;*/
-    /*background: #fff;*/
-    /*left: 0;*/
-    /*right: 0;*/
-    /*height: 20px;*/
-    /*z-index: 1;*/
-/*}*/
-/*body:before {*/
-    /*top: 0;*/
-/*}*/
-/*body:after {*/
-    /*bottom: 0;*/
-/*}*/
-/*body {*/
-    /*border-left: 20px solid #fff;*/
-    /*border-right: 20px solid #fff;*/
-/*}*/
+::-moz-selection { background: #f1269d; }
+::selection { background: #f1269d; }
 
-
-
-
-.container {
-    margin: 0 auto;
-    max-width: 1200px;
-    display: flex;
-    flex-flow: row wrap;
+code {
+    font-family: Menlo, "Andale Mono", "Courier New", Courier, "Lucida Console", Monaco, monospace;
+    background-color: #ededed;
+    color: #C9266B;
+    font-size: 1.8rem;
+    display: inline-block;
+    padding: 0 .5rem;
+    border-radius: 3px;
 }
-
-/*p {*/
-    /*font-size: 1.8rem;*/
-/*}*/
-
-/*h2 {*/
-    /*!*font-family: 'Playfair Display', serif;*!*/
-    /*font-family: Kievit, serif;*/
-    /*!*text-transform: uppercase;*!*/
-    /*font-weight: bold;*/
-
-    /*color: #1977CC;*/
-    /*!*display: inline;*!*/
-    /*!*box-shadow: inset 0 -.7em 0 #FFEB3B;*!*/
-    /*font-size: 1.5rem;*/
-    /*!* Increment: (1.3333 - 1.2) × 24px = 3.2px *!*/
-    /*line-height: calc( 120% + 0.2 * 1rem );*/
-
-/*}*/
-
-/*@media (min-width: 20em) {*/
-    /*h2 {*/
-        /*font-size: calc( 1.5rem + .6 * (100vw - 20rem) / (60 - 20) );*/
-        /*!* from 120% + 3.2px to 120% + 0px *!*/
-        /*line-height: calc( 120% + 0.2 * (100vw - 60rem) / (20 - 60) );*/
-    /*}*/
-/*}*/
-/*@media (min-width: 60em) {*/
-    /*h2 {*/
-        /*font-size: calc(1.5rem + .6 * 1rem);*/
-        /*!* Base value, no increment needed. *!*/
-        /*line-height: 120%;*/
-    /*}*/
-/*}*/
-
-/*h3 {*/
-    /*!*font-family: 'Playfair Display', serif;*!*/
-    /*!*font-family: Kievit, sans-serif;*!*/
-    /*font-family: Adelle, serif;*/
-    /*!*text-transform: uppercase;*!*/
-    /*font-size: 3rem;*/
-    /*!*font-weight: 700;*!*/
-    /*font-weight: 800;*/
-    /*font-style: normal;*/
-    /*line-height: 1.22;*/
-    /*letter-spacing: -.018em;*/
-    /*color: #333333;*/
-/*}*/
-
-/*!*@media (min-width: 20em) {*!*/
-    /*!*h3 {*!*/
-        /*!*font-size: calc( .8rem + .6 * (100vw - 20rem) / (60 - 20) );*!*/
-        /*!*!* from 120% + 3.2px to 120% + 0px *!*!*/
-        /*!*line-height: calc( 100% + 0.2 * (100vw - 60rem) / (20 - 60) );*!*/
-    /*!*}*!*/
-/*!*}*!*/
-/*!*@media (min-width: 60em) {*!*/
-    /*!*h3 {*!*/
-        /*!*font-size: calc(.8rem + .6 * 1rem);*!*/
-        /*!*!* Base value, no increment needed. *!*!*/
-        /*!*line-height: 100%;*!*/
-    /*!*}*!*/
-/*!*}*!*/
-
-/*!* TODO: FIX VISITED ETC *!*/
-/*a {*/
-    /*text-decoration: none;*/
-/*}*/
-
-/*a h2 {*/
-    /*display: inline;*/
-    /*box-shadow: inset 0 -.7em 0 #FFEB3B;*/
-    /*color: #1977CC;*/
-    /*transition: box-shadow 180ms;*/
-/*}*/
-
-/*a h2:hover {*/
-    /*box-shadow: inset 0 -1.1em 0 #FFEB3B;*/
-/*}*/
-
-/*a h3,*/
-/*a:visited h3 {*/
-    /*display: inline;*/
-    /*box-shadow: inset 0 -.7em 0 #FFEB3B;*/
-    /*color: #1977CC;*/
-    /*transition: box-shadow 180ms;*/
-/*}*/
-
-/*a h3:hover {*/
-    /*box-shadow: inset 0 -1.1em 0 #FFEB3B;*/
-/*}*/

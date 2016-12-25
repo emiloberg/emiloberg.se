@@ -35,40 +35,47 @@ export default ({ mockup }) => {
 		: screenshotImage.src;
 
 	return (
-		<div className={ styles.mockupWrapper }>
-			<div
-				className={ classnames(styles.jsSource, styles.mockup, 'lazy') }
-				data-src={ mockupLazyImage }
-				style={{
-					paddingBottom: mockupdata.mockupRatio + '%'
-				}}
-			/>
-			<div
-				className={ classnames(styles.jsSource, styles.screenshot, 'lazy') }
-				data-src={ screenshotLazyImage }
-				style={{
-					paddingBottom: mockupdata.screenshotRatio + '%',
-					...sizeOut
-				}}
-			/>
-			<div className={ classnames(styles.mockup, styles.fallback) }>
+
+			<div className={ styles.mockupWrapper }>
 				<div
-					className={ styles.fallbackMockup }
+					className={ classnames(styles.jsSource, styles.mockup, 'lazy') }
+					data-src={ mockupLazyImage }
 					style={{
-						backgroundImage: `url('${mockupImage.src}?fallback')`,
 						paddingBottom: mockupdata.mockupRatio + '%'
 					}}
 				/>
 				<div
-					className={ styles.fallbackScreenshot }
+					className={ classnames(styles.jsSource, styles.screenshot, 'lazy') }
+					data-src={ screenshotLazyImage }
 					style={{
-						backgroundImage: `url('${screenshotImage.src}?fallback')`,
 						paddingBottom: mockupdata.screenshotRatio + '%',
 						...sizeOut
 					}}
 				/>
+				<div className={ classnames(styles.mockup, styles.fallback) }>
+					<div
+						className={ styles.fallbackMockup }
+						style={{
+							backgroundImage: `url('${mockupImage.src}?fallback')`,
+							paddingBottom: mockupdata.mockupRatio + '%'
+						}}
+					/>
+					<div
+						className={ styles.fallbackScreenshot }
+						style={{
+							backgroundImage: `url('${screenshotImage.src}?fallback')`,
+							paddingBottom: mockupdata.screenshotRatio + '%',
+							...sizeOut
+						}}
+					/>
+				</div>
+				<div
+					className={ classnames(styles.mockup, styles.shadow) }
+					style={{
+						paddingBottom: mockupdata.mockupRatio + '%',
+						borderRadius: mockupdata.radius + 'px'
+					}}
+				/>
 			</div>
-
-		</div>
 	);
 };

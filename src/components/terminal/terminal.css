@@ -54,6 +54,8 @@
     white-space: pre-wrap;
     word-break: break-all;
     word-break: break-word;
+    color: inherit;
+    background-color: inherit;
 }
 .code:after {
     -webkit-animation: blink 0.9s infinite;

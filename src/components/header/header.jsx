@@ -13,11 +13,11 @@ export default () => {
           <h1 className={ styles.name }>Hi I'm Emil!</h1>
           <div>
             <p>
-              Half of me build things, mostly with Javascript and React.
-              The other half is helping software developing businesses with management.
+              Half of the time I build things, mostly with Javascript and React.
+              The other half I'm helping software developing businesses with management.
             </p>
             <p>
-              I've a keen interest in systems thinking, skiing, psychology and human behavior, scuba diving, user experience, using digitalisation and automatisation to develop the world and way to many other things.
+              I've a keen interest in systems thinking, skiing, psychology and human behavior, internet of things, scuba diving, user experience, using digitalisation and automatisation to develop the world and way to many other things.
             </p>
             <p>
               I'm also running <a href="http://www.bitupnorth.com">Bit Up North AB</a>

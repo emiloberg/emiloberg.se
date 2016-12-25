@@ -8,7 +8,7 @@ const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>React Static Website</title>
+  <title>Emil Öberg</title>
   <link rel="stylesheet" href="bundle.css">
 </head>
 <body class="no-js">
