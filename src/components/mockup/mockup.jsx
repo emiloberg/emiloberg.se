@@ -6,10 +6,10 @@ import styles from './mockup.css';
 import MOCKUPDATA from './mockup.json';
 
 const images = {
-	HubotSlack: require('responsive?placeholder=true&sizes[]=1024,sizes[]=2048!./images/screenshots/hubot-slack.png'),
-	RekListan: require('responsive?placeholder=true&sizes[]=1024,sizes[]=1025!./images/screenshots/reklistan.png'),
-	iPad: require('responsive?placeholder=true&sizes[]=1024,sizes[]=2048!./images/mockups/ipad.png'),
-	iPhone: require('responsive?placeholder=true&sizes[]=1024,sizes[]=2048!./images/mockups/iphone.png')
+	HubotSlack: require('responsive?placeholder=true&sizes[]=650,sizes[]=1300!./images/screenshots/hubot-slack.png'),
+	RekListan: require('responsive?placeholder=true&sizes[]=190,sizes[]=380!./images/screenshots/reklistan.png'),
+	iPad: require('responsive?placeholder=true&sizes[]=650,sizes[]=1300!./images/mockups/ipad.png'),
+	iPhone: require('responsive?placeholder=true&sizes[]=190,sizes[]=380!./images/mockups/iphone.png')
 };
 
 export default ({ mockup }) => {

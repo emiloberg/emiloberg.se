@@ -190,7 +190,7 @@ export default () => (
           My home is my laboratory and I'm connecting way to many things to the internet. The plants tell me when they need water, the lights can be controlled from half way around the world (the necessity of this is still pending) and my morning music plays automagically.
         </p>
         <p>
-          Raspberry Pi's and Arduinos are running the show and the dispatcher is <a href="https://nodered.org/" rel="noopener">Node-RED</a>. I've built a few modules myself. Take a look at them!
+          Raspberry Pi's and Arduinos are running the show and the dispatcher is Node-RED. I've built a few modules myself. Take a look at them!
         </p>
       </Text>
 			<TwoUp>
@@ -250,7 +250,7 @@ export default () => (
 			</TwoUp>
 		</Section>
     <Section bg="green" padding="footer">
-      <Headline type="section">That's all folks!</Headline>
+      <Headline icon="wave" type="section">That's all folks!</Headline>
       <Contacts />
     </Section>
 	</div>

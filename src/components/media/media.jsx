@@ -10,6 +10,14 @@ import styles from './media.css'
 
 const MEDIADATA = require('../../../data/media.json');
 
+function getSrcString(img) {
+  if (img.images.length > 1) {
+    return img.src + '|' +  img.images[1].path;
+  } else {
+    return img.src
+  }
+}
+
 export default ({ type, mediaId }) => {
 	let mediaURL;
 	let mediaType;
@@ -17,7 +25,7 @@ export default ({ type, mediaId }) => {
 	if (type === 'yt') {
 		mediaType = 'video';
 		mediaURL = `https://www.youtube.com/watch?v=${mediaId}?rel=0&showinfo=0&iv_load_policy=3`;
-		const placeholderImg = require(`responsive?placeholder=true&sizes[]=320,sizes[]=640!../../../temp/${mediaId}.jpg`);
+		const placeholderImg = require(`responsive?placeholder=true&sizes[]=650,sizes[]=1300!../../../temp/${mediaId}.jpg`);
 
 		mainMedia = (
 			<a href={ mediaURL } rel="noopener" className="js-disabled"
@@ -27,7 +35,7 @@ export default ({ type, mediaId }) => {
 					<div
 						data-mediaid={ mediaId }
 						className={ classnames(styles.placeholder, styles.videoPlaceholder, 'js-video-placeholder', 'lazy') }
-						data-src={ placeholderImg.src + '|' +  placeholderImg.images[1].path }
+						data-src={ getSrcString(placeholderImg) }
 					>
 						<Icon className={ styles.playIcon } icon="play" center size="Yt" classes />
 						<YtPlaybar className={ styles.playbar } />
@@ -44,7 +52,9 @@ export default ({ type, mediaId }) => {
 	} else if (type === 'slideshare') {
 		mediaType = 'slideshare';
 		mediaURL = MEDIADATA.slideshare[mediaId].url;
-		const placeholderImg = require(`responsive?placeholder=true&sizes[]=510,sizes[]=1020!../../../data/placeholders/slideshare/${mediaId}.jpg`);
+		const placeholderImg = require(`responsive?placeholder=true&sizes[]=650,sizes[]=1300!../../../data/placeholders/slideshare/${mediaId}.jpg`);
+
+		console.log(placeholderImg);
 
 		mainMedia = (
 			<a href={ mediaURL } rel="noopener" className="js-disabled"
@@ -53,7 +63,7 @@ export default ({ type, mediaId }) => {
 				<div className={ classnames(styles[mediaType], styles.responsiveInner) }>
 					<div
 						className={ classnames(styles.placeholder, 'lazy', styles.genericPlaceholder) }
-						data-src={ placeholderImg.src + '|' +  placeholderImg.images[1].path }
+						data-src={ getSrcString(placeholderImg) }
 					>
 						<SsPlaybar mediaId={ mediaId } />
 					</div>
@@ -68,13 +78,13 @@ export default ({ type, mediaId }) => {
 		);
 	} else if (type === 'image') {
 		mediaType = 'image';
-		const image = require(`responsive?placeholder=true&sizes[]=510,sizes[]=1020!./images/${mediaId}`);
+		const image = require(`responsive?placeholder=true&sizes[]=650,sizes[]=1300!./images/${mediaId}`);
 
 		mainMedia = (
 			<div className={ classnames(styles[mediaType], styles.responsiveInner) }>
 				<div
 					className={ classnames(styles.placeholder, 'lazy', styles.genericPlaceholder) }
-					data-src={ image.src + '|' +  image.images[1].path }
+					data-src={ getSrcString(image) }
 				>
 				</div>
 				<div className={ styles.fallback }>

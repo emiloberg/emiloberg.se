@@ -13,6 +13,7 @@ const LogoSlack = require('./svg/logoSlack.svg');
 const GitHub = require('./svg/github.svg');
 const Bulb = require('./svg/bulb.svg');
 const Robot = require('./svg/robot.svg');
+const Wave = require('./svg/wave.svg');
 
 import classnames from 'classnames';
 import styles from './icon.css';
@@ -52,5 +53,7 @@ export default ({ icon, center, size, className }) => {
 		return <Bulb className={ classnames(cssClasses, className) }/>;
 	} else if (icon === 'robot') {
 		return <Robot className={ classnames(cssClasses, className) }/>;
+	} else if (icon === 'wave') {
+		return <Wave className={ classnames(cssClasses, className) }/>;
 	}
 };

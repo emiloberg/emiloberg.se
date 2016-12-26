@@ -1,15 +1,20 @@
 import React from 'react';
 
+import classnames from 'classnames';
+
 import styles from './header.css';
 
-import Me from './header.jpg'
+import me from 'responsive?placeholder=true&sizes[]=650!./header.jpg';
 
 import Contacts from '../contacts/contacts'
 
 export default () => {
   return (
       <div className={ styles.header }>
-        <div className={ styles.headerInner } style={{ backgroundImage: `url('${ Me }')` }} >
+        <div
+          className={ classnames(styles.headerInner, 'lazy') }
+          data-src={ me.src }
+        >
           <h1 className={ styles.name }>Hi I'm Emil!</h1>
           <div>
             <p>
