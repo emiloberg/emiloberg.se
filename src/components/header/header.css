@@ -19,7 +19,7 @@
 }
 
 .name {
-    font-family: Adelle, Arial;
+    font-family: Adelle, 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
     color: rgba(255, 255, 255, .92);
     font-size: 5rem;
     font-weight: 700;
