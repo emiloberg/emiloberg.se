@@ -25,7 +25,7 @@ export default ({ type, mediaId }) => {
 	if (type === 'yt') {
 		mediaType = 'video';
 		mediaURL = `https://www.youtube.com/watch?v=${mediaId}?rel=0&showinfo=0&iv_load_policy=3`;
-		const placeholderImg = require(`responsive?placeholder=true&sizes[]=650,sizes[]=1300!../../../temp/${mediaId}.jpg`);
+		const placeholderImg = require(`responsive?placeholder=true&sizes[]=650,sizes[]=1300!../../../video-placeholders/${mediaId}.jpg`);
 
 		mainMedia = (
 			<a href={ mediaURL } rel="noopener" className="js-disabled"
