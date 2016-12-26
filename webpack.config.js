@@ -1,7 +1,9 @@
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var webpack = require('webpack');
-var path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack');
+const path = require('path');
+
+const ImageminPlugin = require('imagemin-webpack-plugin').default
 
 const DEVELOPMENT = process.env.NODE_ENV === 'development';
 const PRODUCTION = process.env.NODE_ENV === 'production';
@@ -28,7 +30,12 @@ const plugins = PRODUCTION
 				// Properties here are merged into `locals`
 				// passed to the exported render function
 				greet: 'Hello'
-			})
+			}),
+      new ImageminPlugin({
+        pngquant: {
+          quality: '95-100'
+        }
+      })
 ]
 	: 	[
 			new webpack.HotModuleReplacementPlugin()
@@ -40,6 +47,10 @@ plugins.push(
 			youTubeViews: DATA_YOUTUBE
 		}
 	})
+);
+
+plugins.push(
+
 );
 
 const cssLoader = PRODUCTION
