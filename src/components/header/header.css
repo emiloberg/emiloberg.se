@@ -1,21 +1,29 @@
+.headerWrapper {
+    display: flex;
+    justify-content: center;
+    background-color: #2F302F;
+}
+
 .header {
     position: relative;
-    background-color: #2F302F;
-    padding-top: 5rem;
     font-family: OpenSans, "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
     color: rgba(255, 255, 255, .92);
     font-size: 1.6rem;
+
+    max-width: 100rem;
+    width: 90%;
+
+    padding-top: 2rem;
 }
 
 .headerInner {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    max-width: 100rem;
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center bottom;
-    padding: 0 5rem 20rem 5rem;
+
+    padding: 0 0 20rem 0;
 }
 
 .name {
@@ -49,6 +57,7 @@
 
     .header {
         font-size: 2rem;
+        padding-top: 10rem;
     }
 
     .headerInner {
@@ -60,13 +69,24 @@
     .name {
         font-size: 12rem;
         max-width: 30rem;
-        padding-right: 20rem;
+        padding-right: 5rem;
         padding-bottom: 0;
     }
 
     .headerInner {
         flex-direction: row;
-        padding-top: 10rem;
+    }
+}
+
+@media only screen and (min-width: 62.5em) {
+    .name {
+        padding-right: 20rem;
+    }
+}
+
+@media only screen and (min-width: 65.625em) {
+    .header {
+        width: 100rem;
     }
 }
 
@@ -74,23 +94,12 @@
     max-width: 50rem;
 }
 
-/*.headerInner a {*/
-    /*color: rgba(255, 255, 255, .92);*/
-    /*text-decoration: none;*/
-    /*box-shadow: inset 0 -1px 0 #f1269d;*/
-    /*transition: box-shadow 180ms;*/
-/*}*/
-
-/*.headerInner a:hover {*/
-    /*box-shadow: inset 0 -1.3em 0 #f1269d;*/
-/*}*/
-
 /**
  * Contacts card
  */
-
-.contactsCard {
+.contactsWrapper {
     position: absolute;
     transform: translateY(-50%);
     width: 100%;
+    background-color: white;
 }

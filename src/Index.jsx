@@ -251,7 +251,7 @@ export default () => (
 		</Section>
     <Section bg="green" padding="footer">
       <Headline icon="wave" type="section">That's all folks!</Headline>
-      <Contacts />
+      <Contacts footer />
     </Section>
 	</div>
 );

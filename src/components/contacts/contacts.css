@@ -1,22 +1,22 @@
-
-.contactsCard {
-    position: absolute;
-    transform: translateY(-50%);
-    width: 100%;
-}
-
-.contactsCardRetainer {
-    margin: 0 auto;
-    max-width: 110rem;
-}
-
 .contactsInner {
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     color: #2F302F;
-    margin: 0 5rem;
     background-color: white;
     padding: 2rem 2rem;
     border-radius: 2px;
+
+
+}
+
+.footerWrapper {
+    max-width: 100rem;
+    width: 90%;
+}
+
+@media only screen and (min-width: 65.625em) {
+    .footerWrapper {
+        width: 100rem;
+    }
 }
 
 .personal {
