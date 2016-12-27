@@ -6,10 +6,10 @@ import styles from './mockup.css';
 import MOCKUPDATA from './mockup.json';
 
 const images = {
-	HubotSlack: require('responsive?placeholder=true&sizes[]=650,sizes[]=1300!./images/screenshots/hubot-slack.png'),
-	RekListan: require('responsive?placeholder=true&sizes[]=190,sizes[]=380!./images/screenshots/reklistan.png'),
-	iPad: require('responsive?placeholder=true&sizes[]=650,sizes[]=1300!./images/mockups/ipad.png'),
-	iPhone: require('responsive?placeholder=true&sizes[]=190,sizes[]=380!./images/mockups/iphone.png')
+	HubotSlack: require('responsive?placeholder=true&sizes[]=650,sizes[]=1300&name=res/resp/[hash:8]-[width].&publicPath=res/resp/!./images/screenshots/hubot-slack.png'),
+	RekListan: require('responsive?placeholder=true&sizes[]=190,sizes[]=380&name=res/resp/[hash:8]-[width].&publicPath=res/resp/!./images/screenshots/reklistan.png'),
+	iPad: require('responsive?placeholder=true&sizes[]=650,sizes[]=1300&name=res/resp/[hash:8]-[width].&publicPath=res/resp/!./images/mockups/ipad.png'),
+	iPhone: require('responsive?placeholder=true&sizes[]=190,sizes[]=380&name=res/resp/[hash:8]-[width].&publicPath=res/resp/!./images/mockups/iphone.png')
 };
 
 export default ({ mockup }) => {

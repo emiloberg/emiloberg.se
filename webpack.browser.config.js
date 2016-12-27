@@ -22,7 +22,7 @@ module.exports = {
 		modules: ['src-browser', 'node_modules'],
 	},
 	output: {
-		path: path.join(__dirname, 'dist'),
+		path: path.join(__dirname, 'dist', 'js'),
 		filename: 'browser.[hash:8].js',
 		publicPath: '/'
 	},

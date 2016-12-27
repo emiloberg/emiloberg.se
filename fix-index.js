@@ -4,7 +4,7 @@ const fs = require('fs');
 const replace = require('replace');
 const cssContent = fs.readFileSync('./dist/bundle.css', { encoding: 'utf8' });
 const browserHeadContent = fs.readFileSync('./src-browser/browser-head.js', { encoding: 'utf8' });
-const directoryContent = fs.readdirSync('./dist');
+const directoryContent = fs.readdirSync('./dist/js');
 
 const fixedBrowserHeadContent = browserHeadContent.replace(/(?:\r\n|\r|\n)/g, '');
 
@@ -24,7 +24,7 @@ replace({
 
 replace({
 	regex: '</body>',
-	replacement: '<script async src="' + jsFile + '"></script></body>',
+	replacement: '<script async src="js/' + jsFile + '"></script></body>',
 	paths: ['./dist/index.html']
 });
 

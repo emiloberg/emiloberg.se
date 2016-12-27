@@ -99,11 +99,11 @@ module.exports = {
 			exclude: /node_modules/
 		}, {
 			test: /\.(jpg|png)$/,
-			loaders: ['file-loader'],
+			loaders: ['file-loader?name=res/img/[hash:6].[ext]'],
 			exclude: /node_modules/
 		}, {
 			test: /\.(eot|ttf|woff|woff2)$/,
-			loader: 'file?name=[name].[ext]'
+			loader: 'file?name=res/font/[hash:6].[ext]'
 		},
 			{ test: /\.svg$/, loader: 'babel?presets[]=es2015,presets[]=react!svg-react' }
 		, {

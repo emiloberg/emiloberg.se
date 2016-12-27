@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist && NODE_ENV=production webpack && webpack --config webpack.browser.config.js && node fix-index.js && cp src-browser/vendor/flexibility.js dist && rimraf dist/bundle.css && rimraf dist/bundle.js",
+    "build": "rimraf dist && NODE_ENV=production webpack && webpack --config webpack.browser.config.js && node fix-index.js && cp src-browser/vendor/flexibility.js dist/js/ && rimraf dist/bundle.css && rimraf dist/bundle.js",
     "dev": "NODE_ENV=development node dev-server.js",
     "generate": "rimraf temp && node generate-youtube.js"
   },

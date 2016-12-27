@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 import styles from './header.css';
 
-import me from 'responsive?placeholder=true&sizes[]=650!./header.jpg';
+import me from 'responsive?placeholder=true&sizes[]=650&name=res/resp/[hash:8]-[width].&publicPath=res/resp/!./header.jpg';
 
 import Contacts from '../contacts/contacts'
 
