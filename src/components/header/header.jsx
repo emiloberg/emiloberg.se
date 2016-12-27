@@ -18,7 +18,7 @@ export default () => {
           <h1 className={ styles.name }>Hi I'm Emil!</h1>
           <div>
             <p>
-              Half of the time I build things, mostly with Javascript and React.
+              Half the time I build things, mostly with Javascript and React.
               The other half I'm helping software developing businesses with management.
             </p>
             <p>

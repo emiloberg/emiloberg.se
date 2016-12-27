@@ -56,14 +56,14 @@ export default ({ mockup }) => {
 					<div
 						className={ styles.fallbackMockup }
 						style={{
-							backgroundImage: `url('${mockupImage.src}?fallback')`,
+							backgroundImage: `url('${mockupImage.src}')`,
 							paddingBottom: mockupdata.mockupRatio + '%'
 						}}
 					/>
 					<div
 						className={ styles.fallbackScreenshot }
 						style={{
-							backgroundImage: `url('${screenshotImage.src}?fallback')`,
+							backgroundImage: `url('${screenshotImage.src}')`,
 							paddingBottom: mockupdata.screenshotRatio + '%',
 							...sizeOut
 						}}

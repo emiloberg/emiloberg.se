@@ -28,18 +28,19 @@
     line-height: .9;
     color: #f1269d;
     background-image: -webkit-linear-gradient(120deg,#e27629,#f1269d);
-    background-size: 200% 200%;
+    /*background-size: 200% 200%;*/
+    background-size: 100% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding-bottom: 2rem;
-    animation: NameAnim 7s ease infinite;
+    /*animation: NameAnim 7s ease infinite;*/
 }
 
-@keyframes NameAnim {
-    0% { background-position: 10% 0 }
-    50% { background-position: 91% 100% }
-    100% { background-position: 10% 0  }
-}
+/*@keyframes NameAnim {*/
+    /*0% { background-position: 10% 0 }*/
+    /*50% { background-position: 91% 100% }*/
+    /*100% { background-position: 10% 0  }*/
+/*}*/
 
 @media only screen and (min-width: 40em) {
     .name {
@@ -70,7 +71,6 @@
 }
 
 .header p {
-    display: inline-block;
     max-width: 50rem;
 }
 

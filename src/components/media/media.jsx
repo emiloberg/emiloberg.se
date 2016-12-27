@@ -25,7 +25,7 @@ export default ({ type, mediaId }) => {
 	if (type === 'yt') {
 		mediaType = 'video';
 		mediaURL = `https://www.youtube.com/watch?v=${mediaId}?rel=0&showinfo=0&iv_load_policy=3`;
-		const placeholderImg = require(`responsive?placeholder=true&sizes[]=650,sizes[]=1300!../../../video-placeholders/${mediaId}.jpg`);
+		const placeholderImg = require(`responsive?placeholder=true&sizes[]=650,sizes[]=1300!../../../temp/${mediaId}.jpg`);
 
 		mainMedia = (
 			<a href={ mediaURL } rel="noopener" className="js-disabled"
@@ -43,7 +43,7 @@ export default ({ type, mediaId }) => {
 					<div className={ styles.fallback }>
 						<div
 							className={ styles.placeholder }
-							style={{ backgroundImage: `url('${placeholderImg.src}?fallback')` }}
+							style={{ backgroundImage: `url('${placeholderImg.src}')` }}
 						/>
 					</div>
 				</div>
@@ -53,8 +53,6 @@ export default ({ type, mediaId }) => {
 		mediaType = 'slideshare';
 		mediaURL = MEDIADATA.slideshare[mediaId].url;
 		const placeholderImg = require(`responsive?placeholder=true&sizes[]=650,sizes[]=1300!../../../data/placeholders/slideshare/${mediaId}.jpg`);
-
-		console.log(placeholderImg);
 
 		mainMedia = (
 			<a href={ mediaURL } rel="noopener" className="js-disabled"
@@ -70,7 +68,7 @@ export default ({ type, mediaId }) => {
 					<div className={ styles.fallback }>
 						<div
 							className={ styles.placeholder }
-							style={{ backgroundImage: `url('${placeholderImg.src}?fallback')` }}
+							style={{ backgroundImage: `url('${placeholderImg.src}')` }}
 						/>
 					</div>
 				</div>
@@ -90,7 +88,7 @@ export default ({ type, mediaId }) => {
 				<div className={ styles.fallback }>
 					<div
 						className={ styles.placeholder }
-						style={{ backgroundImage: `url('${image.src}?fallback')` }}
+						style={{ backgroundImage: `url('${image.src}')` }}
 					/>
 				</div>
 			</div>

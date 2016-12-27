@@ -7,32 +7,34 @@ import particlesConfig from './particles.conf.json';
 	 * Load YouTube iframe when clicking on a placeholder
 	 */
 	const videos = document.querySelectorAll('.js-video-placeholder');
-	videos.forEach(video => {
-		video.addEventListener('click', (e) => {
-			e.preventDefault();
-			const iframe = document.createElement('iframe');
-			iframe.setAttribute('src', `//www.youtube.com/embed/${e.target.dataset.mediaid}?autoplay=1&?rel=0&showinfo=0&iv_load_policy=3`);
-			iframe.setAttribute('frameborder', '0');
-			iframe.setAttribute('allowfullscreen', '1');
-			e.target.parentNode.replaceChild(iframe, e.target);
-		});
-	});
+  var nVideos;
+  for (nVideos = 0; nVideos < videos.length; ++nVideos) {
+    videos[nVideos].addEventListener('click', (e) => {
+      e.preventDefault();
+      const iframe = document.createElement('iframe');
+      iframe.setAttribute('src', `//www.youtube.com/embed/${e.target.dataset.mediaid}?autoplay=1&?rel=0&showinfo=0&iv_load_policy=3`);
+      iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute('allowfullscreen', '1');
+      e.target.parentNode.replaceChild(iframe, e.target);
+    });
+  }
 
 	/**
 	 * Load Slideshare iframe when clicking on a placeholder
 	 */
 	const slides = document.querySelectorAll('.js-slideshare-next');
-	slides.forEach(slide => {
-		slide.addEventListener('click', (e) => {
-			e.preventDefault();
-			const iframe = document.createElement('iframe');
-			iframe.setAttribute('src', `//www.slideshare.net/slideshow/embed_code/key/${e.target.dataset.mediaid}?startSlide=2`);
-			iframe.setAttribute('frameborder', '0');
-			iframe.setAttribute('allowfullscreen', '1');
-			const toBeReplaced = e.target.parentNode.parentNode.parentNode;
-			toBeReplaced.parentNode.replaceChild(iframe, toBeReplaced);
-		});
-	});
+  var nSlides;
+  for (nSlides = 0; nSlides < slides.length; ++nSlides) {
+    slides[nSlides].addEventListener('click', (e) => {
+      e.preventDefault();
+      const iframe = document.createElement('iframe');
+      iframe.setAttribute('src', `//www.slideshare.net/slideshow/embed_code/key/${e.target.dataset.mediaid}?startSlide=2`);
+      iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute('allowfullscreen', '1');
+      const toBeReplaced = e.target.parentNode.parentNode.parentNode;
+      toBeReplaced.parentNode.replaceChild(iframe, toBeReplaced);
+    });
+  }
 
 	/**
 	 * Without Javascript clicking on a video/slide/etc
@@ -43,9 +45,10 @@ import particlesConfig from './particles.conf.json';
 	 *
 	 */
 	const jsDisabledLinks = document.querySelectorAll('.js-disabled');
-	jsDisabledLinks.forEach(link => {
-		link.addEventListener('click', (e) => { e.preventDefault(); })
-	});
+  var nDisabledLinks;
+  for (nDisabledLinks = 0; nDisabledLinks < jsDisabledLinks.length; ++nDisabledLinks) {
+    jsDisabledLinks[nDisabledLinks].addEventListener('click', (e) => { e.preventDefault(); })
+  }
 
 	/**
 	 * Init Lazy Load

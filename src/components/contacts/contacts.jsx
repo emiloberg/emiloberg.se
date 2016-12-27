@@ -9,7 +9,7 @@ export default () => {
     <div className={ styles.contactsCardRetainer }>
       <div className={ styles.contactsInner }>
         <ul className={ styles.personal }>
-          <li>Tel: <a href="tel:+46739852585">+46 (0)739-85 25 85</a></li>
+          <li>Tel: <a className={ styles.tel } href="tel:+46739852585">+46 (0)739-85 25 85</a></li>
           <li>Mail: <a href="mailto:emil@bitupnorth.com">emil@bitupnorth.com</a></li>
         </ul>
         <ul className={ styles.links }>

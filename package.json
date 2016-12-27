@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist && NODE_ENV=production webpack && webpack --config webpack.browser.config.js && node fix-index.js && rimraf dist/bundle.css",
+    "build": "rimraf dist && NODE_ENV=production webpack && webpack --config webpack.browser.config.js && node fix-index.js && cp src-browser/vendor/flexibility.js dist && rimraf dist/bundle.css && rimraf dist/bundle.js",
     "dev": "NODE_ENV=development node dev-server.js",
     "generate": "rimraf temp && node generate-youtube.js"
   },
@@ -25,6 +25,8 @@
     "jimp": "^0.2.27",
     "json-loader": "^0.5.4",
     "node-fetch": "^1.6.3",
+    "postcss-flexibility": "^1.1.0",
+    "postcss-loader": "^1.2.1",
     "raw-loader": "^0.5.1",
     "react-hot-loader": "^3.0.0-beta.6",
     "replace": "^0.3.0",

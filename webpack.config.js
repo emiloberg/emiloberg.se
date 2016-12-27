@@ -55,9 +55,9 @@ plugins.push(
 
 const cssLoader = PRODUCTION
 	?	ExtractTextPlugin.extract({
-			loader: 'css-loader?minimize&sourceMap&modules&importLoaders=1&localIdentName=[hash:base64:7]'
+			loader: 'css-loader?minimize&sourceMap&modules&importLoaders=1&localIdentName=[hash:base64:7]!postcss-loader'
 		})
-	: 	'style!css-loader?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]';
+	: 	'style!css-loader?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]!postcss-loader';
 
 
 // const cssLoader = 'style!' + cssLoaderParts.join('!');
@@ -113,5 +113,4 @@ module.exports = {
 			},
 		]
 	}
-
 };

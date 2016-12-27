@@ -23,7 +23,8 @@
 
 .twoUp {
     max-width: 65rem;
-    width: 100%;
+    /*width: 100%;*/
+    /*ÄNDRAD FÖR IE*/
     padding: 0;
     /*margin: 0 5%;*/
     display: flex;
@@ -60,7 +61,8 @@
 
 .twoUpUneven {
     max-width: 65rem;
-    width: 100%;
+    /*width: 100%;*/
+    /*ÄNDRAD FÖR IE*/
     padding-bottom: 0;
     /*margin: 0 5%;*/
     display: flex;
@@ -105,7 +107,8 @@
 
 .twoUpInner {
     max-width: 65rem;
-    width: 100%;
+    /*width: 100%;*/
+    /*ÄNDRAD FÖR IE*/
 }
 
 @media only screen and (min-width: 65.625em) {

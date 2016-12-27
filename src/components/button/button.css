@@ -70,10 +70,14 @@
 .button.personal {
     /*font-size: 2rem;*/
     line-height: inherit;
-    padding: 1rem;
+    padding: 1.5rem;
     color: #2c3a7b;
 }
 
 .personal:hover {
     color: white;
+}
+
+.iconWrapper {
+    display: inline-block;
 }
