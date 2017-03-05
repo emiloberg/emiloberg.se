@@ -8,7 +8,7 @@ Connected
 Press Ctrl+C to return to menu
 Listening for changes...
 
-[15:26:13] <span class="y">Changed</span> src/main/webapp/css/partials/atoms/_body.scss
-[15:26:14] <span class="g">Okay</span> src/main/webapp/css/partials/atoms/_body.scss
-[15:26:13] <span class="y">Changed</span> src/main/webapp/templates/main-nav.ftl
-[15:26:14] <span class="g">Okay</span> src/main/webapp/templates/main-nav.ftl
+[15:26:13] <span class="y">Changed</span> adts/blog.ftl
+[15:26:14] <span class="g">Okay</span> adts/blog.ftl
+[15:26:13] <span class="y">Changed</span> templates/main-nav.ftl
+[15:26:14] <span class="g">Okay</span> templates/main-nav.ftl

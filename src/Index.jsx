@@ -215,7 +215,7 @@ export default () => (
                 Remote control everything!
               </p>
               <p>
-                Send data to a <a href="www.telldus.se/products/tellstick" rel="noopener">Tellstick</a>, e.g. turning a lamp on, and receive data, e.g from a remote control or a temperature sensor.
+                Send data to a <a href="http://www.telldus.se/products/tellstick" rel="noopener">Tellstick</a>, e.g. turning a lamp on, and receive data, e.g from a remote control or a temperature sensor.
               </p>
             </Text>
 					</BoxFullHeight>

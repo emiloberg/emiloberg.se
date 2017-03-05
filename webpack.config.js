@@ -3,7 +3,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
 
-const ImageminPlugin = require('imagemin-webpack-plugin').default
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const imageminMozjpeg = require('imagemin-mozjpeg');
 
 const DEVELOPMENT = process.env.NODE_ENV === 'development';
 const PRODUCTION = process.env.NODE_ENV === 'production';
@@ -32,11 +33,14 @@ const plugins = PRODUCTION
 				greet: 'Hello'
 			}),
       new ImageminPlugin({
-        pngquant: {
-          quality: '95-100'
-        }
-      })
-]
+        plugins: [
+          imageminMozjpeg({
+            quality: 70,
+            progressive: true
+          })
+        ]
+      }),
+      ]
 	: 	[
 			new webpack.HotModuleReplacementPlugin()
 		];
@@ -104,9 +108,10 @@ module.exports = {
 		}, {
 			test: /\.(eot|ttf|woff|woff2)$/,
 			loader: 'file?name=res/font/[hash:6].[ext]'
-		},
-			{ test: /\.svg$/, loader: 'babel?presets[]=es2015,presets[]=react!svg-react' }
-		, {
+		}, {
+      test: /\.svg$/,
+      loader: 'babel?presets[]=es2015,presets[]=react!svg-react'
+    }, {
 			test: /\.txt$/,
 			loaders: ['raw-loader'],
 			exclude: /node_modules/

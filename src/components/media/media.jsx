@@ -25,7 +25,7 @@ export default ({ type, mediaId }) => {
 	if (type === 'yt') {
 		mediaType = 'video';
 		mediaURL = `https://www.youtube.com/watch?v=${mediaId}?rel=0&showinfo=0&iv_load_policy=3`;
-		const placeholderImg = require(`responsive?placeholder=true&sizes[]=650,sizes[]=130&name=res/resp/[hash:8]-[width].&publicPath=res/resp/!../../../video-placeholders/${mediaId}.jpg`);
+		const placeholderImg = require(`responsive?placeholder=true&sizes[]=650,sizes[]=1300&name=res/resp/[hash:8]-[width].&publicPath=res/resp/!../../../video-placeholders/${mediaId}.jpg`);
 
 		mainMedia = (
 			<a href={ mediaURL } rel="noopener" className="js-disabled"
@@ -52,7 +52,7 @@ export default ({ type, mediaId }) => {
 	} else if (type === 'slideshare') {
 		mediaType = 'slideshare';
 		mediaURL = MEDIADATA.slideshare[mediaId].url;
-		const placeholderImg = require(`responsive?placeholder=true&sizes[]=650,sizes[]=130&name=res/resp/[hash:8]-[width].&publicPath=res/resp/!../../../data/placeholders/slideshare/${mediaId}.jpg`);
+		const placeholderImg = require(`responsive?placeholder=true&sizes[]=650,sizes[]=1300&name=res/resp/[hash:8]-[width].&publicPath=res/resp/!../../../data/placeholders/slideshare/${mediaId}.jpg`);
 
 		mainMedia = (
 			<a href={ mediaURL } rel="noopener" className="js-disabled"
@@ -76,7 +76,7 @@ export default ({ type, mediaId }) => {
 		);
 	} else if (type === 'image') {
 		mediaType = 'image';
-		const image = require(`responsive?placeholder=true&sizes[]=650,sizes[]=130&name=res/resp/[hash:8]-[width].&publicPath=res/resp/!./images/${mediaId}`);
+		const image = require(`responsive?placeholder=true&sizes[]=650,sizes[]=1300&name=res/resp/[hash:8]-[width].&publicPath=res/resp/!./images/${mediaId}`);
 
 		mainMedia = (
 			<div className={ classnames(styles[mediaType], styles.responsiveInner) }>

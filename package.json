@@ -4,9 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rimraf dist && NODE_ENV=production webpack && webpack --config webpack.browser.config.js && node fix-index.js && cp src-browser/vendor/flexibility.js dist/js/ && rimraf dist/bundle.css && rimraf dist/bundle.js",
+    "build": "rimraf dist && NODE_ENV=production webpack && webpack --config webpack.browser.config.js && npm run build:fixindex && npm run build:copy && npm run build:cleanup",
     "dev": "NODE_ENV=development node dev-server.js",
-    "generate": "rimraf temp && node generate-youtube.js"
+    "generate": "rimraf temp && node generate-youtube.js",
+    "build:copy": "npm run build:copy:favicons && npm run build:copy:flexibility",
+    "build:copy:favicons": "cp favicons/* dist/",
+    "build:copy:flexibility": "cp src-browser/vendor/flexibility.js dist/js/ && rimraf dist/bundle.css",
+    "build:fixindex": "node fix-index.js",
+    "build:cleanup": "rimraf dist/bundle.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +26,7 @@
     "css-loader": "^0.25.0",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "file-loader": "^0.9.0",
+    "imagemin-mozjpeg": "^6.0.0",
     "imagemin-webpack-plugin": "^1.4.4",
     "jimp": "^0.2.27",
     "json-loader": "^0.5.4",
